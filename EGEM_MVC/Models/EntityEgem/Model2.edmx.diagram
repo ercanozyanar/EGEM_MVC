@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6e2c357cea90408aaf15cebc3449a0a2" Name="Diagram1" ZoomLevel="52">
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_DEPO_VARDIYA" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_KALITE_VARDIYA" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EGEM2023Model.EO_GRAVUR_VARDIYA" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_ESNEK_BASKI_KALITE" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_ESNEK_DILIMLEME_KALITE" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_ESNEK_LAMINASYON_KALITE" Width="1.5" PointX="9.25" PointY="7" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_GRAVUR_KALITE" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_OFSET_BASKI_KALITE" Width="1.5" PointX="5.375" PointY="11.75" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_OFSET_BITIRME_KALITE" Width="1.5" PointX="11.375" PointY="11.75" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_ORJINAL_IMAJ" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_DOF_TAKIP" Width="1.5" PointX="13.375" PointY="3.125" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_DOFLIST" Width="1.5" PointX="7.375" PointY="13.75" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_PROJESILINDIR_TALEP" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EGEM2023Model.EGEM_MVC_USER" Width="1.5" PointX="15.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

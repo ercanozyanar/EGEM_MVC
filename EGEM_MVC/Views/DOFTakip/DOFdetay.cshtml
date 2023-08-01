@@ -1,0 +1,156 @@
+﻿@model EGEM_MVC.Models.EntityEgem.EGEM_DOF_TAKIP
+@{
+    /**/
+
+    ViewBag.Title = "DOFdetay";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+        <style>
+        table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+                th, td {
+            background-color: #0C4A6E;
+        }
+    </style>
+    
+    <div class="form-horizontal">
+
+        <p></p>
+        <tr>
+            <td>DOF ID</td>
+            <td>@Html.EditorFor(model => model.ID, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>TARIH</td>
+            <td>@Html.EditorFor(model => model.TARIH, new { htmlAttributes = new { disabled = true, @style = "width:180px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>KAYIT YAPAN</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.KAYIT_YAPAN, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+        </tr>
+        <p></p>
+
+
+        <table border="1" cellpadding="5">
+            <tr>
+                <td>UYGUNSUZLUK FAALIYETI</td>
+                <td>@Html.EditorFor(model => model.UYGUNSUZLUK_FAALIYET, new { htmlAttributes = new { disabled = true, @style = "width:250px" } })</td>
+            </tr>
+            <tr>
+                <td>UYGUNSUZLUK SURECI</td>
+                <td>@Html.EditorFor(model => model.UYGUNSUZLUK_SUREC, new { htmlAttributes = new { disabled = true, @style = "width:750px" } }) </td>
+            </tr>
+            <tr>
+                <td>UYGUNSUZLUK TANIMI</td>
+                <td>@Html.EditorFor(model => model.UYGUNSUZLUK_TANIMI, new { htmlAttributes = new { disabled = true, @style = "width:1300px" } }) </td>
+            </tr>
+            <tr>
+                <td>MUSTERI ADI</td>
+                <td>@Html.EditorFor(model => model.MUSTERI_ADI, new { htmlAttributes = new { disabled = true, @style = "width:500px" } })</td>
+            </tr>
+
+            <tr>
+                <td>STOK ADI</td>
+                <td>@Html.EditorFor(model => model.STOK_ADI, new { htmlAttributes = new { disabled = true, @style = "width:500px" } })</td>
+            </tr>
+            <tr>
+                <td>STOK KODU</td>
+                <td>@Html.EditorFor(model => model.STOK_KODU, new { htmlAttributes = new { disabled = true, @style = "width:250px" } })</td>
+            </tr>
+
+            <tr>
+                <td>SIPARIS NO</td>
+                <td>@Html.EditorFor(model => model.SIPARIS_NO, new { htmlAttributes = new { disabled = true, @style = "width:250px" } })</td>
+            </tr>
+            <tr>
+                <td>BIRIM</td>
+                <td>@Html.EditorFor(model => model.BIRIM, new { htmlAttributes = new { disabled = true, @style = "width:50px" } })</td>
+            </tr>
+
+            <tr>
+                <td>OPERATOR ADI</td>
+                <td>@Html.EditorFor(model => model.OPERATOR_ADI, new { htmlAttributes = new { disabled = true, @style = "width:350px" } })</td>
+            </tr>
+            <tr>
+                <td>MALZEME ADI</td>
+                <td>@Html.EditorFor(model => model.MALZEME_ADI, new { htmlAttributes = new { disabled = true, @style = "width:500px" } })</td>
+            </tr>
+            <tr>
+                <td>MALZEME KODU</td>
+                <td>@Html.EditorFor(model => model.MALZEME_KODU, new { htmlAttributes = new { disabled = true, @style = "width:250px" } })</td>
+            </tr>
+            <tr>
+                <td>HATALI URUN MIKTARI</td>
+                <td>@Html.EditorFor(model => model.HATALI_URUN_MIKTARI, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+            </tr>
+            <tr>
+                <td>UYGUNSUZ MAKINE</td>
+                <td>@Html.EditorFor(model => model.UYGUNSUZ_MAKINA, new { htmlAttributes = new { disabled = true, @style = "width:250px" } })</td>
+            </tr>
+            <p></p>
+            <tr>
+                <td>UYGUNSUZ GRUP</td>
+                <td>@Html.EditorFor(model => model.UYGUNSUZ_GRUP, new { htmlAttributes = new { disabled = true, @style = "width:400px" } })</td>
+            </tr>
+            <p></p>
+            <tr>
+                <td>UYGUNSUZ KOK NEDEN</td>
+                <td>@Html.EditorFor(model => model.UYGUNSUZ_KOK_NEDEN, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+            </tr>
+            <p></p>
+            <p></p>
+            <tr>
+                <td>DOF DURUM</td>
+                <td>@Html.EditorFor(model => model.DOF_DURUM, new { htmlAttributes = new { disabled = true, @style = "width:150px" } })</td>
+            </tr>
+
+            <tr>
+                <td>GORSEL 1</td>
+                <td>
+                    <input type="button" class="btn btn-primary" onclick="location.href='/DOFTakip/Gorsel1/@Model.ID'" value="AÇ" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>GORSEL 2</td>
+                <td>
+                    <input type="button" class="btn btn-primary" onclick="location.href='/DOFTakip/Gorsel2/@Model.ID'" value="AÇ" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>GORSEL 3</td>
+                <td>
+                    <input type="button" class="btn btn-primary" onclick="location.href='/DOFTakip/Gorsel3/@Model.ID'" value="AÇ" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>GORSEL 4</td>
+                <td>
+                    <input type="button" class="btn btn-primary" onclick="location.href='/DOFTakip/Gorsel4/@Model.ID'" value="AÇ" />
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+}
+
+<div>
+    @Html.ActionLink("Back to List", "DOF")
+</div>
+
+
+
+

@@ -1,0 +1,153 @@
+﻿@model EGEM_MVC.Models.EntityEgem.EGEM_DEPO_VARDIYA
+@{
+    ViewBag.Title = "DepoVardetay";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <p></p>
+        <tr>
+            <td>Tarih</td>
+            <td>@Html.EditorFor(model => model.TARIH, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>Vardiya</td>
+            <td>@Html.EditorFor(model => model.VARDIYA, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+        </tr>
+        <p></p>  <p></p>
+        <tr>
+            <td>Depo Vardiya Sorumlusu 1</td>
+            <td>@Html.EditorFor(model => model.DEPO_SORUMLU1, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>Depo Vardiya Sorumlusu 2</td>
+            <td>@Html.EditorFor(model => model.DEPO_SORUMLU2, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+        </tr>
+
+        <p></p>  <p></p>
+
+        <tr>
+            <td>Kimyasal Depo Sorumlusu</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.KIMYASAL_DEPO_SORUMLU, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>Kimyasal Depo Elemanı</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.KIMYASAL_DEPO, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+        </tr>
+        <p></p>  <p></p>
+        <tr>
+            <td>Forklift Operatörü - 1</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.FORKLIFT_OPERATOR1, new { htmlAttributes = new { disabled = true, @style = "width:400px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>Forklift Operatörü - 2</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.FORKLIFT_OPERATOR2, new { htmlAttributes = new { disabled = true, @style = "width:400px" } })</td>
+        </tr>
+        <p></p>  <p></p>
+    </div>
+    <table>
+        <tr>
+            <th>Forklift Durumu</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Makine hammadde besleme verilen</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Makine hammadde besleme (SIRADAKİ İŞ-HAZIRLIK)</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Gelen Kamyon adeti</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.FORLIFT_DURUM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.MAKINE_HAMMADDE_BESLEME_VERILEN, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.MAKINE_HAMMADDE_BESLEME_SIRADAKI, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.GELEN_KAMYON_ADET, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Gelen Diğer Ürünler</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Silindir Girişleri yapıldımı</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Bekleyen Dat Varmı?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Beklene Mal Kabul Varmı?</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.GELEN_DIGER_URUN, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.SILINDIR_GIRIS, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.BEKLEYEN_DAT, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.BEKLEYEN_MAL_KABUL, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Tutanak Tutuldumu?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Palet Durumu</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>İdari İşlem Bilgisi</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Vardiya Kontrol Bilgilendirme</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.TUTANAK, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.PALET_DURUMU, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.IDARI_ISLEM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.VARDIYA_KONTROL, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Mürekkep Bilgisi</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>AKÜ Şarj Alanı</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Depo Geliş Satın Alma Listesinde Olmayıp gelen malzeme</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Gece Yapılması gereken işler</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.MUREKKEP_BILGI, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.AKU_SARJ, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.DEPO_GELIS_SATINALMA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.GECE_IS, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Açıklama / Bilgilendirme</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.ACIKLAMA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:200px;width:1000px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+        </tr>
+    </table>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "KaliteVar")
+</div>

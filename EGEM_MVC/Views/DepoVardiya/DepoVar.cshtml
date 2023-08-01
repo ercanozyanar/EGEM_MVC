@@ -1,0 +1,66 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using EGEM_MVC.Models.EntityEgem;
+@model  PagedList.IPagedList<EGEM_DEPO_VARDIYA>
+@{
+    ViewBag.Title = "DepoVar";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+&nbsp;
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/lib/bootstrap.min.css">
+<script src="/lib/jquery-1.12.2.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<p></p>
+&nbsp;&nbsp;
+</div>
+<table id="hamlist" class="table table-striped table-bordered table-hover " width="100" cellspacing="0">
+    <tr class="table-secondary">
+        <th>Detay</th>
+        <th scope="row">TARIH</th>
+        <th scope="row">VARDIYA</th>
+        <th scope="row">DEPO_SORUMLU1</th>
+        <th scope="row">DEPO_SORUMLU2</th>
+        <th scope="row">KIMYASAL_DEPO SORUMLU</th>
+        <th scope="row">KIMYASAL_DEPO</th>
+        <th scope="row">FORKLIFT OPERATOR 1 </th>
+        <th scope="row">FORKLIFT OPERATOR 2 </th>
+        <th scope="row">FORKLIFT DURUM</th>
+        <th scope="row">SILINDIR GIRIS</th>
+        <th scope="row">BEKLEYEN DAT</th>
+        <th scope="row">BEKLEYEN MAL KABUL</th>
+        <th scope="row">TUTANAK</th>
+        <th scope="row">IDARI ISLEM</th>
+    </tr>
+    <tbody>
+        @foreach (var depolist in Model)
+        {
+            <tr>
+                <th><a href="/DepoVardiya/DepoVardetay/@depolist.ID" class="btn bg-info">Detay</a></th>
+                <td>@depolist.TARIH</td>
+                <td>@depolist.VARDIYA</td>
+                <td>@depolist.DEPO_SORUMLU1</td>
+                <td>@depolist.DEPO_SORUMLU2</td>
+                <td>@depolist.KIMYASAL_DEPO_SORUMLU</td>
+                <td>@depolist.KIMYASAL_DEPO</td>
+                <td>@depolist.FORKLIFT_OPERATOR1</td>
+                <td>@depolist.FORKLIFT_OPERATOR1</td>
+                <td>@depolist.FORLIFT_DURUM</td>
+                <td>@depolist.SILINDIR_GIRIS</td>
+                <td>@depolist.BEKLEYEN_DAT</td>
+                <td>@depolist.BEKLEYEN_MAL_KABUL</td>
+                <td>@depolist.TUTANAK</td>
+                <td>@depolist.IDARI_ISLEM</td>
+            </tr>
+        }
+    </tbody>
+</table>
+ Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, Page_No =>Url.Action("DepoVar",
+    new { Page_No, Sorting_Order= ViewBag.CurrentSortOrder, Filter_Value = ViewBag.FilterValue }))
+
+
+
+

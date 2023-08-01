@@ -1,0 +1,198 @@
+﻿@model EGEM_MVC.Models.EntityEgem.EO_GRAVUR_VARDIYA
+@{
+               
+
+                ViewBag.Title = "GravurVardetay";
+                Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <p></p>
+    <tr>
+        <td>Tarih</td>
+        <td>@Html.EditorFor(model => model.TARIH, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+    </tr>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <tr>
+        <td>Vardiya</td>
+        <td>@Html.EditorFor(model => model.VARDIYA, new { htmlAttributes = new { disabled = true, @style = "width:120px" } })</td>
+    </tr>
+    <p></p>
+    <tr>
+        <td>Teslim Eden</td>&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.TESLIM_EDEN, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+    </tr>
+    <p></p>
+    <tr>
+        <td>Teslim Alan</td>&nbsp;&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.TESLIM_ALAN, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+    </tr>
+    <p></p>  <p></p>
+    <tr>
+        <td>Makine</td>&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.MAKINE, new { htmlAttributes = new { disabled = true, @style = "width:150px" } })</td>
+    </tr>
+    &nbsp;&nbsp;
+    <tr>
+        <td>Makine Hızı</td>&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.MAKINE_HIZ, new { htmlAttributes = new { disabled = true, @style = "width:50px" } })</td>
+    </tr>
+    &nbsp;&nbsp;
+    <tr>
+        <td>İş Emri</td>&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.ISEMRI, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+    </tr>
+    &nbsp;&nbsp;
+    <tr>
+        <td>Ürün Kodu</td>&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.URUN_KODU, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+    </tr>
+    <tr>
+        <td>İş Değişim Sayısı</td>
+        <td>@Html.EditorFor(model => model.ISDEGISIM_SAY, new { htmlAttributes = new { disabled = true, @style = "width:50px" } })</td>
+    </tr>
+    &nbsp;&nbsp;
+    <tr>
+        <td>Toplam Bobin Fire Miktarı</td>
+        <td>@Html.EditorFor(model => model.TOP_FIRE, new { htmlAttributes = new { disabled = true, @style = "width:50px" } })</td>
+    </tr>
+    <tr>
+        <td>Üretilen Palet Sayısı</td>&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.URETILEN_PALET, new { htmlAttributes = new { disabled = true, @style = "width:50px" } })</td>
+    </tr>
+    &nbsp;&nbsp;
+    <tr>
+        <td>Vardiya Çalışan Sayısı</td>&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.VARD_CALISAN, new { htmlAttributes = new { disabled = true, @style = "width:50px" } })</td>
+    </tr>
+    <tr>
+        <td>DIE</td>&nbsp;&nbsp;
+        <td>@Html.EditorFor(model => model.DIE_VURUSU, new { htmlAttributes = new { disabled = true, @style = "width:50px" } })</td>
+    </tr>
+
+    <p></p><p></p><p></p><p></p>
+
+
+
+    <div class="form-group">
+
+        <div class="container">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Kısım</th>
+                        <th>Ok / Nok</th>
+                        <th>Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rulo Temizliği</td>
+                        <td>@Html.EditorFor(model => model.RULO_TEM1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.RULO_TEM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Fotosel Temizliği</td>
+                        <td>@Html.EditorFor(model => model.FOTOSEL_TEM1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.FOTOSEL_TEM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Presör Temizliği</td>
+                        <td>@Html.EditorFor(model => model.PRESOR_TEM1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.PRESOR_TEM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+
+                    <tr>
+                        <td>Göz ve Ayna Temizliği</td>
+                        <td>@Html.EditorFor(model => model.GOZAYNA_TEM1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.GOZAYNA_TEM1, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Ünite Temizliği</td>
+                        <td>@Html.EditorFor(model => model.UNITE_TEM1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.UNITE_TEM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Zemin Epoksi Temizliği</td>
+                        <td>@Html.EditorFor(model => model.ZEMIN_EPOKSI_TEM1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.ZEMIN_EPOKSI_TEM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Emergency Stop Kontrolü</td>
+                        <td>@Html.EditorFor(model => model.EMERGENCY_KONTR1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.EMERGENCY_KONTR1, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Embos Ünitesi Koruma Kapak switchlerini kontrol et</td>
+                        <td>@Html.EditorFor(model => model.EMERGENCY_KONTR1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.EMERGENCY_KONTR, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Kesim bölümü korumak kapak swtichlerini kontrol et</td>
+                        <td>@Html.EditorFor(model => model.KESIM_BOLUM1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.KESIM_BOLUM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td>Monomatic bölümü kapak ve pencere emniyet switchlerini kontrol et</td>
+                        <td>@Html.EditorFor(model => model.MONOMATIN_KONT1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.MONOMATIN_KONT, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Paletleme bölümü genel kontrol ve temizliği</td>
+                        <td>@Html.EditorFor(model => model.PALETLEME_TEM1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.PALETLEME_TEM, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Lemanic üretim alanında makine etrafında düzensiz mürekkep kovaları var mı?</td>
+                        <td>@Html.EditorFor(model => model.LEMANIC_URETIM_ALANI1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.LEMANIC_URETIM_ALANI, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Arabaların tüm parçaları  (perde -çamurluk vb.. ) doğru olarak takılı mı?</td>
+                        <td>@Html.EditorFor(model => model.ARABA_PARCA1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.ARABA_PARCA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Makine Arıza durumu var mı?</td>
+                        <td>@Html.EditorFor(model => model.MAKINE_ARIZA1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.MAKINE_ARIZA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Bobin ve Mürekkep eksik veya değişen kod mevcut mu?</td>
+                        <td>@Html.EditorFor(model => model.BOBIN_MUREKKEP1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.BOBIN_MUREKKEP, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                    <tr>
+                        <td>Silindirlerde problem var mı?</td>
+                        <td>@Html.EditorFor(model => model.SILINDIR1, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+                        <td>@Html.EditorFor(model => model.SILINDIR, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:200px" } })</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p></p><p></p><p></p><p></p>
+
+    </div>
+
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "GravurVar")
+</div>
+
+

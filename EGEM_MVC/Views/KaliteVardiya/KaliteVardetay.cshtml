@@ -1,0 +1,800 @@
+﻿@model EGEM_MVC.Models.EntityEgem.EGEM_KALITE_VARDIYA
+@{
+    ViewBag.Title = "KaliteVardetay";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+
+
+
+    <div class="form-group">
+        <p></p>
+        <tr>
+            <td>Tarih</td>
+            <td>@Html.EditorFor(model => model.TARIH, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>Vardiya</td>
+            <td>@Html.EditorFor(model => model.VARDIYA, new { htmlAttributes = new { disabled = true, @style = "width:100px" } })</td>
+        </tr>
+        <p></p>  <p></p>
+        <tr>
+            <td>Kalite Vardiya Sorumlusu 1</td>
+            <td>@Html.EditorFor(model => model.KALITE_VARDIYA_SORUMLU1, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+        </tr>
+        <tr>
+            <td>Kalite Vardiya Sorumlusu 2</td>
+            <td>@Html.EditorFor(model => model.KALITE_VARDIYA_SORUMLU2, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+        </tr>
+
+        <p></p>  <p></p>
+
+        <tr>
+            <td>Kalite Proses Kontrol Elemanı ve Sorumlu Olduğu Makine - 1</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.K_PROSESS_1, new { htmlAttributes = new { disabled = true, @style = "width:300px" } })</td>
+            <td>@Html.EditorFor(model => model.K_PROSESS_1_MAK, new { htmlAttributes = new { disabled = true, @style = "width:150px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>Kalite Proses Kontrol Elemanı ve Sorumlu Olduğu Makine - 2</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.K_PROSESS_2, new { htmlAttributes = new { disabled = true, @style = "width:300px" } })</td>
+            <td>@Html.EditorFor(model => model.K_PROSESS_2_MAK, new { htmlAttributes = new { disabled = true, @style = "width:150px" } })</td>
+        </tr>
+        <p></p>
+        <tr>
+            <td>Kalite Proses Kontrol Elemanı ve Sorumlu Olduğu Makine - 3</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.K_PROSESS_3, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+            <td>@Html.EditorFor(model => model.K_PROSESS_3_MAK, new { htmlAttributes = new { disabled = true, @style = "width:150px" } })</td>
+        </tr>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <tr>
+            <td>Kalite Proses Kontrol Elemanı ve Sorumlu Olduğu Makine - 4</td>&nbsp;&nbsp;
+            <td>@Html.EditorFor(model => model.K_PROSESS_4, new { htmlAttributes = new { disabled = true, @style = "width:200px" } })</td>
+            <td>@Html.EditorFor(model => model.K_PROSESS_4_MAK, new { htmlAttributes = new { disabled = true, @style = "width:150px" } })</td>
+        </tr>
+        <p></p>  <p></p>
+
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+
+                <button class="nav-link small" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true" style="font-size:11px">Lemanic1</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:11px">Lemanic2</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" style="font-size:11px">Lemanic3</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home1" type="button" role="tab" aria-controls="pills-home" aria-selected="false" style="font-size:10px">KBA</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile1" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:10px">R700</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact1" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" style="font-size:10px">B102</button>
+            </li>
+
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:10px">B104</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact2" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" style="font-size:10px">B106Ler</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home2" type="button" role="tab" aria-controls="pills-home" aria-selected="false" style="font-size:10px">B106Per</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile3" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:10px">Experfoil</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" style="font-size:10px">Foilmaster</button>
+            </li>
+
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile4" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:10px">Milltex</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact4" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" style="font-size:10px">Polar</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home4" type="button" role="tab" aria-controls="pills-home" aria-selected="false" style="font-size:10px">Omega80</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile5" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:10px">Pencere</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact5" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" style="font-size:10px">Rotomec</button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile6" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:10px">Titan</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact6" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" style="font-size:10px">Revomac</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home6" type="button" role="tab" aria-controls="pills-home" aria-selected="false" style="font-size:10px">NordMeccanica</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile7" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" style="font-size:10px">Esnek Aktarım</button>
+            </li>
+
+
+        </ul>
+
+
+
+
+        @*=========================================================================================================================================================================*@
+        <div class="tab-content" id="pills-tabContent">
+
+            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.LEM1_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.LEM1_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.LEM1_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.LEM1_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Basılacak sonraki işlerin AW, tekli film çıktısı, bıçak filmi vb.malzemeler hazır mı?</th>
+                        <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.LEM1_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td> @Html.EditorFor(model => model.LEM1_BAS_AW, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+            @*=========================================================================================================================================================================*@
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="tab-pane fade show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <table>
+                        <tr>
+                            <th>D.No / Açıklama</th>
+                            <th>D.No / Açıklama</th>
+                            <th>D.No / Açıklama</th>
+                            <th>D.No / Açıklama</th>
+                        </tr>
+                        <tr>
+                            <td> @Html.EditorFor(model => model.LEM2_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                            <td> @Html.EditorFor(model => model.LEM2_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                            <td> @Html.EditorFor(model => model.LEM2_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                            <td> @Html.EditorFor(model => model.LEM2_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Basılacak sonraki işlerin AW, tekli film çıktısı, bıçak filmi vb.malzemeler hazır mı?</th>
+                            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                            <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                        </tr>
+                        <tr>
+                            <td> @Html.EditorFor(model => model.LEM2_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td> @Html.EditorFor(model => model.LEM2_BAS_AW, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.LEM3_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.LEM3_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.LEM3_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.LEM3_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Basılacak sonraki işlerin AW, tekli film çıktısı, bıçak filmi vb.malzemeler hazır mı?</th>
+                        <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.LEM3_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td> @Html.EditorFor(model => model.LEM3_BAS_AW, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade show" id="pills-home1" role="tabpanel" aria-labelledby="pills-home-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.KBA_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.KBA_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.KBA_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.KBA_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.KBA_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-profile1" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.R700_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.R700_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.R700_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.R700_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.R700_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-contact1" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.B102_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B102_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B102_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B102_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.B102_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane fade" id="pills-profile2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.B104_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B104_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B104_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B104_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.B104_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.B106L_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B106L_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B106L_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B106L_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.B106L_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane fade show" id="pills-home2" role="tabpanel" aria-labelledby="pills-home-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.B106P_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B106P_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B106P_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.B106P_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.B106P_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-profile3" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.EXPERTFOIL_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.EXPERTFOIL_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.EXPERTFOIL_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.EXPERTFOIL_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.EXPERTFOIL_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-contact3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.FOILMASTER_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.FOILMASTER_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.FOILMASTER_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.FOILMASTER_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.FOILMASTER_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane fade" id="pills-profile4" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.MILLTEX_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.MILLTEX_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.MILLTEX_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.MILLTEX_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.MILLTEX_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tab-pane fade show" id="pills-contact4" role="tabpanel" aria-labelledby="pills-home-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.POLAR_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.POLAR_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.POLAR_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.POLAR_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.POLAR_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+            <div class="tab-pane fade show" id="pills-home4" role="tabpanel" aria-labelledby="pills-home-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.OMEGA_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.OMEGA_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.OMEGA_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.OMEGA_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.OMEGA_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-profile5" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.PENCERE_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.PENCERE_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.PENCERE_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.PENCERE_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.PENCERE_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-contact5" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.ROTOMEC_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.ROTOMEC_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.ROTOMEC_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.ROTOMEC_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.ROTOMEC_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-profile6" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.TITAN_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.TITAN_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.TITAN_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.TITAN_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.TITAN_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-contact6" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.REVOMAC_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.REVOMAC_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.REVOMAC_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.REVOMAC_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.REVOMAC_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+            <div class="tab-pane fade show" id="pills-home6" role="tabpanel" aria-labelledby="pills-home-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.NORD_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.NORD_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.NORD_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.NORD_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.NORD_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="pills-profile7" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table>
+                    <tr>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                        <th>D.No / Açıklama</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.ESNEK_AKTAR_ACIK1, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.ESNEK_AKTAR_ACIK2, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.ESNEK_AKTAR_ACIK3, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                        <td> @Html.EditorFor(model => model.ESNEK_AKTAR_ACIK4, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Makinede deneme (PRV) Var/Yok? Varsa açıklama yazınız.</th>
+                    </tr>
+                    <tr>
+                        <td> @Html.EditorFor(model => model.ESNEK_AKTAR_MAKINE_DENEME, new { htmlAttributes = new { disabled = true, @style = "height:100px;width:300px" } })</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <p></p><p></p><p></p><p></p>
+    <table>
+        <tr>
+            <th>Baskıda yeni iş / prova iş var mı?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Arıza/Duruş yapan makine var mı? Öncesi sonrası ürünler kontrol edildi mi?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>COF ölçümü tolerans dışı çıkan iş emri var mı? Müdahale edildi mi? Sonuçları yazın</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.BASKI_PROVA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.ARIZA_DURUS, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.COF_OLCUMU, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Crease’i tolerans dışı çıkan iş emri var mı? Müdahale edildi mi? Sonuçları yazın</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Yürü onayı verilen işemri hangileri? Oper. ile karşılıklı imzalanarak numune alındımı?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Herhangi bir sebepten dolayı kontrol edilemeyen bir iş var mı?</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.CREASE_TOLERANS, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.YURU_ONAY, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.HERHANGI_SEBEP, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Katlama, arşiv numuneleri ve renk yelpazesi kontrol edildi mi?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Hatadan dolayı ayrılan palet/bobin var mı?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Durdurulan / onay verilmeyen iş var mı?</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.KATLAMA_ARSIV, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.HATA_PALET, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.DURDURULAN_ONAY, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Tespit edilen NOK var mı? Miktarlarını belirtiniz.</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Açılan DÖF var mı? Baskılı/baskısız numune ve hammadde etiketi alındı mı?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Uygunsuz hammadde tespit edildi mi? Varsa numunesi ve etiketi alındı mı?</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.TESPIT_NOK, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.ACIK_DOF, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.UYGUNSUZ_HAMMADDE, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Arızalı cihaz/çalışmayan sistem var mı?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Gelmeyen personel var mı?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>İdari sorunlarla karşılaştıysanız yazınız</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.ARIZALI_CIHAZ, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.GELMEYEN_PERSONEL, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.IDARI_SORUN, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Lemanic sahası için önlem alınması gereken durum</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Offset sahası için önlem alınması gereken durum</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Rotomec sahası için önlem alınması gereken durum</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.LEMANIC_SAHA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.OFFSET_SAHA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.ROTOMEC_SAHA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:600px" } })</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Ayıklama sahası için önlem alınması gereken durum</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Laboratuar sahası için önlem alınması gereken durum</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Testleri yapılamayan / tamamlanamayan iş var mı?</th>
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Diğer</th>
+        </tr>
+        <tr>
+            <td> @Html.EditorFor(model => model.AYIKLAMA_SAHA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.LABORATUAR_SAHA, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.TEST_YAPILAMAYAN, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+            <td> &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td> @Html.EditorFor(model => model.DIGER, new { htmlAttributes = new { disabled = true, @rows = 8, @style = "height:100px;width:400px" } })</td>
+        </tr>
+    </table>
+
+
+
+
+
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "KaliteVar")
+</div>

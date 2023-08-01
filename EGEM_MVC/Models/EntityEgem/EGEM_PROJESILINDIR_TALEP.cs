@@ -7,16 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EGEM_MVC.Models.Entity
+namespace EGEM_MVC.Models.EntityEgem
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class EGEM_99_DEPO_BAKIYE
+    public partial class EGEM_PROJESILINDIR_TALEP
     {
-        public string SON_HAREKET { get; set; }
+        public string SIPARIS_NO { get; set; }
+        public string TALEP_NO { get; set; }
+        public string CARI_KODU { get; set; }
+        public string CARI_ISIM { get; set; }
+        public string STOK_KODU { get; set; }
         public string STOK_ADI { get; set; }
-        public decimal BAKIYE { get; set; }
-        public Nullable<long> SIRA { get; set; }
+        public string SIPARIS_TARIHI { get; set; }
+        public Nullable<decimal> MIKTAR { get; set; }
     }
 }

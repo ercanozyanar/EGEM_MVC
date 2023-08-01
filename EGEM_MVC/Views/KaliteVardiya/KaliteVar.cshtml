@@ -1,0 +1,73 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using EGEM_MVC.Models.EntityEgem;
+@model  PagedList.IPagedList<EGEM_KALITE_VARDIYA>
+
+@{
+    ViewBag.Title = "KaliteVar";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+&nbsp;
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/lib/bootstrap.min.css">
+<script src="/lib/jquery-1.12.2.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<p></p>
+
+
+ &nbsp;&nbsp;
+</div>
+<table id="hamlist" class="table table-striped table-bordered table-hover " width="100" cellspacing="0">
+    <tr class="table-secondary">
+        <th>Detay</th>
+        <th scope="row">TARIH</th>
+        <th scope="row">VARDIYA</th>
+        <th scope="row">KALITE_VARDIYA_SORUMLU1</th>
+        <th scope="row">KALITE_VARDIYA_SORUMLU2</th>
+        <th scope="row">K_PROSESS_1</th>
+        <th scope="row">K_PROSESS_2</th>
+        <th scope="row">K_PROSESS_3</th>
+        <th scope="row">K_PROSESS_4</th>
+        <th scope="row">K_PROSESS_5</th>
+        <th scope="row">K_PROSESS_6</th>
+        <th scope="row">K_PROSESS_1_MAK</th>
+        <th scope="row">K_PROSESS_2_MAK</th>
+        <th scope="row">K_PROSESS_3_MAK</th>
+        <th scope="row">K_PROSESS_4_MAK</th>
+        <th scope="row">K_PROSESS_5_MAK</th>
+        <th scope="row">K_PROSESS_6_MAK</th>
+    </tr>
+    <tbody>
+        @foreach (var kalitelist in Model)
+        {
+        <tr>
+            <th><a href="/KaliteVardiya/KaliteVardetay/@kalitelist.ID" class="btn bg-info">Detay</a></th>
+            <td>@kalitelist.TARIH</td>
+            <td>@kalitelist.VARDIYA</td>
+            <td>@kalitelist.KALITE_VARDIYA_SORUMLU1</td>
+            <td>@kalitelist.KALITE_VARDIYA_SORUMLU2</td>
+            <td>@kalitelist.K_PROSESS_1</td>
+            <td>@kalitelist.K_PROSESS_2</td>
+            <td>@kalitelist.K_PROSESS_3</td>
+            <td>@kalitelist.K_PROSESS_4</td>
+            <td>@kalitelist.K_PROSESS_5</td>
+            <td>@kalitelist.K_PROSESS_6</td>
+            <td>@kalitelist.K_PROSESS_1_MAK</td>
+            <td>@kalitelist.K_PROSESS_2_MAK</td>
+            <td>@kalitelist.K_PROSESS_3_MAK</td>
+            <td>@kalitelist.K_PROSESS_4_MAK</td>
+            <td>@kalitelist.K_PROSESS_5_MAK</td>
+            <td>@kalitelist.K_PROSESS_6_MAK</td>
+        </tr>
+        }
+    </tbody>
+</table>
+ Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, Page_No =>Url.Action("KaliteVar",
+    new { Page_No, Sorting_Order= ViewBag.CurrentSortOrder, Filter_Value = ViewBag.FilterValue }))
+
+
+

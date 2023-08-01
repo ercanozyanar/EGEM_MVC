@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using EGEM_MVC.Models.Entity;
+using EGEM_MVC.Models.EntityEgem;
 using PagedList.Mvc;
 using PagedList;
 using System.Data.SqlClient;
@@ -14,21 +14,18 @@ using System.IO;
 using System.Web.Security;
 using ClosedXML.Excel;
 
-
-
-
 namespace EGEM_MVC.Controllers
 {
-    public class ListeController : Controller
+    public class ProjeSilindirController : Controller
     {
-        PILOTEntities db = new PILOTEntities();
+        EGEM2023Entities db = new EGEM2023Entities();
         SqlConnection conn1 = new SqlConnection("Data Source=192.168.0.251;Initial Catalog=EGEM2022;Persist Security Info=True;User ID=egem;Password=123456");
         public static string adi;
         public static string fname;
         public static string kod;
         public static string kodsip;
         SqlCommand komut = new SqlCommand();
-        public ActionResult depo10list(String Search_Data, String Filter_Value, String FilterSip_Value, int? Page_No)
+        public ActionResult ProjeSilindir(String Search_Data, String Filter_Value, String FilterSip_Value, int? Page_No)
         {
             kod = Search_Data;
             if (Search_Data != null)
@@ -41,13 +38,13 @@ namespace EGEM_MVC.Controllers
             }
             ViewBag.FilterValue = Search_Data;
 
-            var students = from stu in db.EGEM_DEPOLAR_RAPOR select stu;
+            var students = from stu in db.EGEM_PROJESILINDIR_TALEP select stu;
             if (!String.IsNullOrEmpty(Search_Data))
             {
-                students = students.Where(stu => stu.STOK_ADI.ToString().Contains(Search_Data.ToString()));
+                students = students.Where(stu => stu.SIPARIS_TARIHI.ToString().Contains(Search_Data.ToString()));
             }
             //-----------------------------------------------------------------------------------------------------
-            students = students.OrderByDescending(stu => stu.STOK_KODU);
+            students = students.OrderByDescending(stu => stu.SIPARIS_NO);
             int Size_Of_Page = 10;
             int No_Of_Page = (Page_No ?? 1);
             return View(students.ToPagedList(No_Of_Page, Size_Of_Page));
@@ -56,34 +53,34 @@ namespace EGEM_MVC.Controllers
         [HttpPost]
         public ActionResult Export(string Search_Data, string Filter_Value)
         {
-            PILOTEntities entities = new PILOTEntities();
+            EGEM2023Entities entities = new EGEM2023Entities();
             DataTable dt = new DataTable("Grid");
-            dt.Columns.AddRange(new DataColumn[9]
+            dt.Columns.AddRange(new DataColumn[8]
             {
-                new DataColumn("STOK_KODU"),
-                new DataColumn("STOK_ADI"),
-                new DataColumn("HAMMADDE_DEPO"),
-                new DataColumn("HURDA_DEPO"),
-                new DataColumn("EGESAN_DEPO"),
-                new DataColumn("EGEOFSET_DEPO"),
-                new DataColumn("EGEMET_DEPO"),
-                new DataColumn("EGEM2_DEPO"),
-                new DataColumn("EGEM143_DEPO"),
+                new DataColumn("SIPARIS TARIHI"),
+                new DataColumn("SIPARIS NO"),
+                new DataColumn("TALEP NO"),
+                new DataColumn("CARI KODU"),
+                new DataColumn("CARI ISIM"),
+                new DataColumn("STOK KODU"),
+                new DataColumn("STOK ADI"),
+                new DataColumn("MIKTAR"),
+                
             });
-            var customers = from stu in entities.EGEM_DEPOLAR_RAPOR select stu;
-            customers = customers.Where(stu => stu.STOK_ADI.ToString().Contains(kod.ToString()));
+            var customers = from stu in entities.EGEM_PROJESILINDIR_TALEP select stu;
+            customers = customers.Where(stu => stu.SIPARIS_TARIHI.ToString().Contains(kod.ToString()));
             foreach (var customer in customers.ToList())
             {
                 dt.Rows.Add(
+                    customer.SIPARIS_TARIHI,
+                    customer.SIPARIS_NO,
+                    customer.TALEP_NO,
+                    customer.CARI_KODU,
+                    customer.CARI_ISIM,
                     customer.STOK_KODU,
                     customer.STOK_ADI,
-                    customer.HAMMADDE_DEPO,
-                    customer.HURDA_DEPO,
-                    customer.EGESAN_DEPO,
-                    customer.EGEOFSET_DEPO,
-                    customer.EGEMET_DEPO,
-                    customer.EGEM2_DEPO,
-                    customer.EGEM143_DEPO
+                    customer.MIKTAR
+                  
                     );
             }
             using (XLWorkbook wb = new XLWorkbook())
@@ -91,9 +88,9 @@ namespace EGEM_MVC.Controllers
                 wb.Worksheets.Add(dt);
                 using (MemoryStream stream = new MemoryStream())
                 {
-                 wb.SaveAs(stream);
-                 return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Grid.xlsx");
-         
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Grid.xlsx");
+
                 }
             }
 

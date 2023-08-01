@@ -25,10 +25,10 @@ namespace EGEM_MVC.Models.Entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<EGEM_10_DEPO_BAKIYE> EGEM_10_DEPO_BAKIYE { get; set; }
-        public virtual DbSet<EGEM_1003_DEPO_BAKIYE> EGEM_1003_DEPO_BAKIYE { get; set; }
-        public virtual DbSet<EGEM_1004_DEPO_BAKIYE> EGEM_1004_DEPO_BAKIYE { get; set; }
-        public virtual DbSet<EGEM_104_DEPO_BAKIYE> EGEM_104_DEPO_BAKIYE { get; set; }
-        public virtual DbSet<EGEM_99_DEPO_BAKIYE> EGEM_99_DEPO_BAKIYE { get; set; }
+        public virtual DbSet<EGEM_DEPOLAR_RAPOR> EGEM_DEPOLAR_RAPOR { get; set; }
+        public virtual DbSet<EGEM_PORT_AIRSALIYE> EGEM_PORT_AIRSALIYE { get; set; }
+        public virtual DbSet<EGEM_AKTIFURETIM> EGEM_AKTIFURETIM { get; set; }
+        public virtual DbSet<EGEM_DEPO99BAKIYE> EGEM_DEPO99BAKIYE { get; set; }
+        public virtual DbSet<EGEM_143_DEPO_BAKIYE> EGEM_143_DEPO_BAKIYE { get; set; }
     }
 }

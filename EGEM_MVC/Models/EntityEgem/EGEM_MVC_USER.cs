@@ -7,15 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EGEM_MVC.Models.Entity
+namespace EGEM_MVC.Models.EntityEgem
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class EGEM_104_DEPO_BAKIYE
+    public partial class EGEM_MVC_USER
     {
-        public string STOK_KODU { get; set; }
-        public string STOK_ADI { get; set; }
-        public decimal DEPO104 { get; set; }
+        public int ID { get; set; }
+        public string AD_SOYAD { get; set; }
+        public string SIFRE { get; set; }
+        public string ROL { get; set; }
     }
 }

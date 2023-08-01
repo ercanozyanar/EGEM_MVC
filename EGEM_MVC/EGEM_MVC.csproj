@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
     </Reference>
@@ -59,6 +62,9 @@
     </Reference>
     <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -142,24 +148,93 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AirsaliyeController.cs" />
+    <Compile Include="Controllers\AktifUretimController.cs" />
+    <Compile Include="Controllers\Depo143BakiyeController.cs" />
+    <Compile Include="Controllers\Depo99BakiyeController.cs" />
+    <Compile Include="Controllers\DepoVardiyaController.cs" />
+    <Compile Include="Controllers\DOFTakipController.cs" />
+    <Compile Include="Controllers\GravurVardiyaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KaliteVardiyaController.cs" />
     <Compile Include="Controllers\ListeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProjeSilindirController.cs" />
+    <Compile Include="Controllers\SweetController.cs" />
+    <Compile Include="Enums\Alerts.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\EGEM_1003_DEPO_BAKIYE.cs">
+    <Compile Include="Models\EntityEgem\EGEM_DEPO_VARDIYA.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_DOFLIST.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_DOF_TAKIP.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_ESNEK_BASKI_KALITE.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_ESNEK_DILIMLEME_KALITE.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_ESNEK_LAMINASYON_KALITE.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_GRAVUR_KALITE.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_KALITE_VARDIYA.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_MVC_USER.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_OFSET_BASKI_KALITE.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_OFSET_BITIRME_KALITE.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_ORJINAL_IMAJ.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EGEM_PROJESILINDIR_TALEP.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\EO_GRAVUR_VARDIYA.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\Model2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\Model2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EntityEgem\Model2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\EGEM_143_DEPO_BAKIYE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\EGEM_1004_DEPO_BAKIYE.cs">
+    <Compile Include="Models\Entity\EGEM_AKTIFURETIM.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\EGEM_104_DEPO_BAKIYE.cs">
+    <Compile Include="Models\Entity\EGEM_DEPO99BAKIYE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\EGEM_10_DEPO_BAKIYE.cs">
+    <Compile Include="Models\Entity\EGEM_DEPOLAR_RAPOR.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Entity\EGEM_99_DEPO_BAKIYE.cs">
+    <Compile Include="Models\Entity\EGEM_PORT_AIRSALIYE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\Model1.Context.cs">
@@ -178,6 +253,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CommonServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -196,10 +272,25 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Mycssthema.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\sweetalert\bootstrap-sweetalert.png" />
+    <Content Include="Content\sweetalert\docs.css" />
+    <Content Include="Content\sweetalert\sweet-alert.css" />
+    <Content Include="Content\sweetalert\thumbs-up.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\EntityEgem\Model2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EntityEgem\Model2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <LastGenOutput>Model2.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -245,6 +336,18 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\EntityEgem\Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EntityEgem\Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\sweetalert\sweet-alert.less" />
+    <Content Include="Content\sweetalert\sweet-alert-combine.less" />
+    <Content Include="Content\sweetalert\sweet-alert-animations.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -274,9 +377,30 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Liste\depo10list.cshtml" />
+    <Content Include="Views\Airsaliye\airsaliye.cshtml" />
+    <Content Include="Views\KaliteVardiya\KaliteVar.cshtml" />
+    <Content Include="Views\KaliteVardiya\KaliteVardetay.cshtml" />
+    <Content Include="Views\DepoVardiya\DepoVar.cshtml" />
+    <Content Include="Views\DepoVardiya\DepoVardetay.cshtml" />
+    <Content Include="Views\GravurVardiya\GravurVar.cshtml" />
+    <Content Include="Views\GravurVardiya\GravurVardetay.cshtml" />
+    <Content Include="Views\AktifUretim\Aktifuretlist.cshtml" />
+    <Content Include="Views\AktifUretim\Aktifuretdetay.cshtml" />
+    <Content Include="Views\AktifUretim\Aktifdetay.cshtml" />
+    <Content Include="Views\Depo99Bakiye\Depo99Bakiye.cshtml" />
+    <Content Include="Views\Depo143Bakiye\Depo143Bakiye.cshtml" />
+    <Content Include="Views\DOFTakip\DOF.cshtml" />
+    <Content Include="Views\DOFTakip\DOFdetay.cshtml" />
+    <Content Include="Views\DOFTakip\Gorsel1.cshtml" />
+    <Content Include="Views\DOFTakip\Gorsel2.cshtml" />
+    <Content Include="Views\DOFTakip\Gorsel3.cshtml" />
+    <Content Include="Views\DOFTakip\Gorsel4.cshtml" />
+    <Content Include="Views\ProjeSilindir\ProjeSilindir.cshtml" />
+    <Content Include="Views\Sweet\Alert.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

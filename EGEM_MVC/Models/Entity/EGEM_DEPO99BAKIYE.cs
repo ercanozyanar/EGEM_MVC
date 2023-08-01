@@ -12,10 +12,17 @@ namespace EGEM_MVC.Models.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class EGEM_1004_DEPO_BAKIYE
+    public partial class EGEM_DEPO99BAKIYE
     {
         public string STOK_KODU { get; set; }
         public string STOK_ADI { get; set; }
-        public decimal BAKIYE { get; set; }
+        public Nullable<decimal> STOK_BAKIYE { get; set; }
+        public string SERI_NO { get; set; }
+        public Nullable<decimal> SERI_BAKIYE { get; set; }
+        public Nullable<int> DOF_NO { get; set; }
+        public string KAYIT_YAPAN { get; set; }
+        public string DOF_TARIH { get; set; }
+        public string UYGUNSUZLUK_TANIMI { get; set; }
+        public Nullable<decimal> KREDI_NOTU { get; set; }
     }
 }

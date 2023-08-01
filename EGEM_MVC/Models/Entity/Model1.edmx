@@ -4,32 +4,10 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PILOTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PILOTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PILOT.dbo.EGEM_10_DEPO_BAKIYE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="EGEM_10_DEPO_BAKIYE">
-          <Key>
-            <PropertyRef Name="STOK_KODU" />
-            <PropertyRef Name="DEPO10" />
-          </Key>
-          <Property Name="STOK_KODU" Type="varchar" MaxLength="35" Nullable="false" />
-          <Property Name="STOK_ADI" Type="varchar" MaxLength="100" />
-          <Property Name="DEPO10" Type="decimal" Precision="38" Scale="8" Nullable="false" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'PILOT.dbo.EGEM_1003_DEPO_BAKIYE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="EGEM_1003_DEPO_BAKIYE">
-          <Key>
-            <PropertyRef Name="STOK_KODU" />
-            <PropertyRef Name="DEPO106" />
-          </Key>
-          <Property Name="STOK_KODU" Type="varchar" MaxLength="35" Nullable="false" />
-          <Property Name="STOK_ADI" Type="varchar" MaxLength="100" />
-          <Property Name="DEPO106" Type="decimal" Precision="38" Scale="8" Nullable="false" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'PILOT.dbo.EGEM_1004_DEPO_BAKIYE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="EGEM_1004_DEPO_BAKIYE">
+warning 6002: The table/view 'PILOT.dbo.EGEM_143_DEPO_BAKIYE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EGEM_143_DEPO_BAKIYE">
           <Key>
             <PropertyRef Name="STOK_KODU" />
             <PropertyRef Name="BAKIYE" />
@@ -39,171 +17,270 @@ warning 6002: The table/view 'PILOT.dbo.EGEM_1004_DEPO_BAKIYE' does not have a p
           <Property Name="BAKIYE" Type="decimal" Precision="38" Scale="8" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PILOT.dbo.EGEM_104_DEPO_BAKIYE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="EGEM_104_DEPO_BAKIYE">
+warning 6002: The table/view 'PILOT.dbo.EGEM_AKTIFURETIM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EGEM_AKTIFURETIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="SIPARIS_NO" Type="varchar" MaxLength="15" />
+          <Property Name="MAKINA" Type="varchar" MaxLength="16" />
+          <Property Name="STOK_KODU" Type="varchar" MaxLength="35" />
+          <Property Name="STOK_ADI" Type="varchar" MaxLength="100" />
+          <Property Name="PLANLANAN_MIKTAR" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="CARI_ADI" Type="nvarchar" MaxLength="4000" />
+          <Property Name="ISEMRI" Type="nvarchar" MaxLength="50" />
+          <Property Name="URETIM_MIKTARI" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PILOT.dbo.EGEM_DEPO99BAKIYE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EGEM_DEPO99BAKIYE">
           <Key>
             <PropertyRef Name="STOK_KODU" />
-            <PropertyRef Name="DEPO104" />
           </Key>
           <Property Name="STOK_KODU" Type="varchar" MaxLength="35" Nullable="false" />
           <Property Name="STOK_ADI" Type="varchar" MaxLength="100" />
-          <Property Name="DEPO104" Type="decimal" Precision="38" Scale="8" Nullable="false" />
+          <Property Name="STOK_BAKIYE" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="SERI_NO" Type="varchar" MaxLength="50" />
+          <Property Name="SERI_BAKIYE" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="DOF_NO" Type="int" />
+          <Property Name="KAYIT_YAPAN" Type="nvarchar(max)" />
+          <Property Name="DOF_TARIH" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZLUK_TANIMI" Type="nvarchar(max)" />
+          <Property Name="KREDI_NOTU" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'PILOT.dbo.EGEM_99_DEPO_BAKIYE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="EGEM_99_DEPO_BAKIYE">
+warning 6002: The table/view 'PILOT.dbo.EGEM_DEPOLAR_RAPOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EGEM_DEPOLAR_RAPOR">
           <Key>
-            <PropertyRef Name="BAKIYE" />
+            <PropertyRef Name="STOK_KODU" />
           </Key>
-          <Property Name="SON_HAREKET" Type="varchar" MaxLength="30" />
+          <Property Name="STOK_KODU" Type="varchar" MaxLength="35" Nullable="false" />
           <Property Name="STOK_ADI" Type="varchar" MaxLength="100" />
-          <Property Name="BAKIYE" Type="decimal" Precision="38" Scale="8" Nullable="false" />
-          <Property Name="SIRA" Type="bigint" />
+          <Property Name="HAMMADDE_DEPO" Type="decimal" Precision="38" Scale="8" />
+          <Property Name="HURDA_DEPO" Type="decimal" Precision="38" Scale="8" />
+          <Property Name="EGESAN_DEPO" Type="decimal" Precision="38" Scale="8" />
+          <Property Name="EGEOFSET_DEPO" Type="decimal" Precision="38" Scale="8" />
+          <Property Name="EGEMET_DEPO" Type="decimal" Precision="38" Scale="8" />
+          <Property Name="EGEM2_DEPO" Type="decimal" Precision="38" Scale="8" />
+          <Property Name="EGEM143_DEPO" Type="decimal" Precision="38" Scale="8" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PILOT.dbo.EGEM_PORT_AIRSALIYE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EGEM_PORT_AIRSALIYE">
+          <Key>
+            <PropertyRef Name="STOK_KODU" />
+          </Key>
+          <Property Name="IRSALIYE_NO" Type="varchar" MaxLength="15" />
+          <Property Name="CARI_ISIM" Type="nvarchar" MaxLength="4000" />
+          <Property Name="STOK_KODU" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="STOK_ADI" Type="nvarchar" MaxLength="4000" />
+          <Property Name="MIKTAR" Type="int" />
+          <Property Name="SIPARIS_NO" Type="varchar" MaxLength="15" />
         </EntityType>
         <EntityContainer Name="PILOTModelStoreContainer">
-          <EntitySet Name="EGEM_10_DEPO_BAKIYE" EntityType="Self.EGEM_10_DEPO_BAKIYE" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="EGEM_143_DEPO_BAKIYE" EntityType="Self.EGEM_143_DEPO_BAKIYE" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [EGEM_10_DEPO_BAKIYE].[STOK_KODU] AS [STOK_KODU], 
-    [EGEM_10_DEPO_BAKIYE].[STOK_ADI] AS [STOK_ADI], 
-    [EGEM_10_DEPO_BAKIYE].[DEPO10] AS [DEPO10]
-    FROM [dbo].[EGEM_10_DEPO_BAKIYE] AS [EGEM_10_DEPO_BAKIYE]</DefiningQuery>
+    [EGEM_143_DEPO_BAKIYE].[STOK_KODU] AS [STOK_KODU], 
+    [EGEM_143_DEPO_BAKIYE].[STOK_ADI] AS [STOK_ADI], 
+    [EGEM_143_DEPO_BAKIYE].[BAKIYE] AS [BAKIYE]
+    FROM [dbo].[EGEM_143_DEPO_BAKIYE] AS [EGEM_143_DEPO_BAKIYE]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EGEM_1003_DEPO_BAKIYE" EntityType="Self.EGEM_1003_DEPO_BAKIYE" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="EGEM_AKTIFURETIM" EntityType="Self.EGEM_AKTIFURETIM" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [EGEM_1003_DEPO_BAKIYE].[STOK_KODU] AS [STOK_KODU], 
-    [EGEM_1003_DEPO_BAKIYE].[STOK_ADI] AS [STOK_ADI], 
-    [EGEM_1003_DEPO_BAKIYE].[DEPO106] AS [DEPO106]
-    FROM [dbo].[EGEM_1003_DEPO_BAKIYE] AS [EGEM_1003_DEPO_BAKIYE]</DefiningQuery>
+    [EGEM_AKTIFURETIM].[ID] AS [ID], 
+    [EGEM_AKTIFURETIM].[SIPARIS_NO] AS [SIPARIS_NO], 
+    [EGEM_AKTIFURETIM].[MAKINA] AS [MAKINA], 
+    [EGEM_AKTIFURETIM].[STOK_KODU] AS [STOK_KODU], 
+    [EGEM_AKTIFURETIM].[STOK_ADI] AS [STOK_ADI], 
+    [EGEM_AKTIFURETIM].[PLANLANAN_MIKTAR] AS [PLANLANAN_MIKTAR], 
+    [EGEM_AKTIFURETIM].[CARI_ADI] AS [CARI_ADI], 
+    [EGEM_AKTIFURETIM].[ISEMRI] AS [ISEMRI], 
+    [EGEM_AKTIFURETIM].[URETIM_MIKTARI] AS [URETIM_MIKTARI]
+    FROM [dbo].[EGEM_AKTIFURETIM] AS [EGEM_AKTIFURETIM]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EGEM_1004_DEPO_BAKIYE" EntityType="Self.EGEM_1004_DEPO_BAKIYE" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="EGEM_DEPO99BAKIYE" EntityType="Self.EGEM_DEPO99BAKIYE" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [EGEM_1004_DEPO_BAKIYE].[STOK_KODU] AS [STOK_KODU], 
-    [EGEM_1004_DEPO_BAKIYE].[STOK_ADI] AS [STOK_ADI], 
-    [EGEM_1004_DEPO_BAKIYE].[BAKIYE] AS [BAKIYE]
-    FROM [dbo].[EGEM_1004_DEPO_BAKIYE] AS [EGEM_1004_DEPO_BAKIYE]</DefiningQuery>
+    [EGEM_DEPO99BAKIYE].[STOK_KODU] AS [STOK_KODU], 
+    [EGEM_DEPO99BAKIYE].[STOK_ADI] AS [STOK_ADI], 
+    [EGEM_DEPO99BAKIYE].[STOK_BAKIYE] AS [STOK_BAKIYE], 
+    [EGEM_DEPO99BAKIYE].[SERI_NO] AS [SERI_NO], 
+    [EGEM_DEPO99BAKIYE].[SERI_BAKIYE] AS [SERI_BAKIYE], 
+    [EGEM_DEPO99BAKIYE].[DOF_NO] AS [DOF_NO], 
+    [EGEM_DEPO99BAKIYE].[KAYIT_YAPAN] AS [KAYIT_YAPAN], 
+    [EGEM_DEPO99BAKIYE].[DOF_TARIH] AS [DOF_TARIH], 
+    [EGEM_DEPO99BAKIYE].[UYGUNSUZLUK_TANIMI] AS [UYGUNSUZLUK_TANIMI], 
+    [EGEM_DEPO99BAKIYE].[KREDI_NOTU] AS [KREDI_NOTU]
+    FROM [dbo].[EGEM_DEPO99BAKIYE] AS [EGEM_DEPO99BAKIYE]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EGEM_104_DEPO_BAKIYE" EntityType="Self.EGEM_104_DEPO_BAKIYE" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="EGEM_DEPOLAR_RAPOR" EntityType="Self.EGEM_DEPOLAR_RAPOR" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [EGEM_104_DEPO_BAKIYE].[STOK_KODU] AS [STOK_KODU], 
-    [EGEM_104_DEPO_BAKIYE].[STOK_ADI] AS [STOK_ADI], 
-    [EGEM_104_DEPO_BAKIYE].[DEPO104] AS [DEPO104]
-    FROM [dbo].[EGEM_104_DEPO_BAKIYE] AS [EGEM_104_DEPO_BAKIYE]</DefiningQuery>
+    [EGEM_DEPOLAR_RAPOR].[STOK_KODU] AS [STOK_KODU], 
+    [EGEM_DEPOLAR_RAPOR].[STOK_ADI] AS [STOK_ADI], 
+    [EGEM_DEPOLAR_RAPOR].[HAMMADDE_DEPO] AS [HAMMADDE_DEPO], 
+    [EGEM_DEPOLAR_RAPOR].[HURDA_DEPO] AS [HURDA_DEPO], 
+    [EGEM_DEPOLAR_RAPOR].[EGESAN_DEPO] AS [EGESAN_DEPO], 
+    [EGEM_DEPOLAR_RAPOR].[EGEOFSET_DEPO] AS [EGEOFSET_DEPO], 
+    [EGEM_DEPOLAR_RAPOR].[EGEMET_DEPO] AS [EGEMET_DEPO], 
+    [EGEM_DEPOLAR_RAPOR].[EGEM2_DEPO] AS [EGEM2_DEPO], 
+    [EGEM_DEPOLAR_RAPOR].[EGEM143_DEPO] AS [EGEM143_DEPO]
+    FROM [dbo].[EGEM_DEPOLAR_RAPOR] AS [EGEM_DEPOLAR_RAPOR]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EGEM_99_DEPO_BAKIYE" EntityType="Self.EGEM_99_DEPO_BAKIYE" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="EGEM_PORT_AIRSALIYE" EntityType="Self.EGEM_PORT_AIRSALIYE" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [EGEM_99_DEPO_BAKIYE].[SON_HAREKET] AS [SON_HAREKET], 
-    [EGEM_99_DEPO_BAKIYE].[STOK_ADI] AS [STOK_ADI], 
-    [EGEM_99_DEPO_BAKIYE].[BAKIYE] AS [BAKIYE], 
-    [EGEM_99_DEPO_BAKIYE].[SIRA] AS [SIRA]
-    FROM [dbo].[EGEM_99_DEPO_BAKIYE] AS [EGEM_99_DEPO_BAKIYE]</DefiningQuery>
+    [EGEM_PORT_AIRSALIYE].[IRSALIYE_NO] AS [IRSALIYE_NO], 
+    [EGEM_PORT_AIRSALIYE].[CARI_ISIM] AS [CARI_ISIM], 
+    [EGEM_PORT_AIRSALIYE].[STOK_KODU] AS [STOK_KODU], 
+    [EGEM_PORT_AIRSALIYE].[STOK_ADI] AS [STOK_ADI], 
+    [EGEM_PORT_AIRSALIYE].[MIKTAR] AS [MIKTAR], 
+    [EGEM_PORT_AIRSALIYE].[SIPARIS_NO] AS [SIPARIS_NO]
+    FROM [dbo].[EGEM_PORT_AIRSALIYE] AS [EGEM_PORT_AIRSALIYE]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PILOTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="EGEM_10_DEPO_BAKIYE">
-          <Key>
-            <PropertyRef Name="STOK_KODU" />
-            <PropertyRef Name="DEPO10" />
-          </Key>
-          <Property Name="STOK_KODU" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DEPO10" Type="Decimal" Precision="38" Scale="8" Nullable="false" />
-        </EntityType>
-        <EntityType Name="EGEM_1003_DEPO_BAKIYE">
-          <Key>
-            <PropertyRef Name="STOK_KODU" />
-            <PropertyRef Name="DEPO106" />
-          </Key>
-          <Property Name="STOK_KODU" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DEPO106" Type="Decimal" Precision="38" Scale="8" Nullable="false" />
-        </EntityType>
-        <EntityType Name="EGEM_1004_DEPO_BAKIYE">
-          <Key>
-            <PropertyRef Name="STOK_KODU" />
-            <PropertyRef Name="BAKIYE" />
-          </Key>
-          <Property Name="STOK_KODU" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="BAKIYE" Type="Decimal" Precision="38" Scale="8" Nullable="false" />
-        </EntityType>
-        <EntityType Name="EGEM_104_DEPO_BAKIYE">
-          <Key>
-            <PropertyRef Name="STOK_KODU" />
-            <PropertyRef Name="DEPO104" />
-          </Key>
-          <Property Name="STOK_KODU" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="DEPO104" Type="Decimal" Precision="38" Scale="8" Nullable="false" />
-        </EntityType>
-        <EntityType Name="EGEM_99_DEPO_BAKIYE">
-          <Key>
-            <PropertyRef Name="BAKIYE" />
-          </Key>
-          <Property Name="SON_HAREKET" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="BAKIYE" Type="Decimal" Precision="38" Scale="8" Nullable="false" />
-          <Property Name="SIRA" Type="Int64" />
-        </EntityType>
         <EntityContainer Name="PILOTEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="EGEM_10_DEPO_BAKIYE" EntityType="Self.EGEM_10_DEPO_BAKIYE" />
-          <EntitySet Name="EGEM_1003_DEPO_BAKIYE" EntityType="Self.EGEM_1003_DEPO_BAKIYE" />
-          <EntitySet Name="EGEM_1004_DEPO_BAKIYE" EntityType="Self.EGEM_1004_DEPO_BAKIYE" />
-          <EntitySet Name="EGEM_104_DEPO_BAKIYE" EntityType="Self.EGEM_104_DEPO_BAKIYE" />
-          <EntitySet Name="EGEM_99_DEPO_BAKIYE" EntityType="Self.EGEM_99_DEPO_BAKIYE" />
+          <EntitySet Name="EGEM_DEPOLAR_RAPOR" EntityType="PILOTModel.EGEM_DEPOLAR_RAPOR" />
+          <EntitySet Name="EGEM_PORT_AIRSALIYE" EntityType="PILOTModel.EGEM_PORT_AIRSALIYE" />
+          <EntitySet Name="EGEM_AKTIFURETIM" EntityType="PILOTModel.EGEM_AKTIFURETIM" />
+          <EntitySet Name="EGEM_DEPO99BAKIYE" EntityType="PILOTModel.EGEM_DEPO99BAKIYE" />
+          <EntitySet Name="EGEM_143_DEPO_BAKIYE" EntityType="PILOTModel.EGEM_143_DEPO_BAKIYE" />
         </EntityContainer>
+        <EntityType Name="EGEM_DEPOLAR_RAPOR">
+          <Key>
+            <PropertyRef Name="STOK_KODU" />
+          </Key>
+          <Property Name="STOK_KODU" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="HAMMADDE_DEPO" Type="Decimal" Precision="38" Scale="8" />
+          <Property Name="HURDA_DEPO" Type="Decimal" Precision="38" Scale="8" />
+          <Property Name="EGESAN_DEPO" Type="Decimal" Precision="38" Scale="8" />
+          <Property Name="EGEOFSET_DEPO" Type="Decimal" Precision="38" Scale="8" />
+          <Property Name="EGEMET_DEPO" Type="Decimal" Precision="38" Scale="8" />
+          <Property Name="EGEM2_DEPO" Type="Decimal" Precision="38" Scale="8" />
+          <Property Name="EGEM143_DEPO" Type="Decimal" Precision="38" Scale="8" />
+        </EntityType>
+        <EntityType Name="EGEM_PORT_AIRSALIYE">
+          <Key>
+            <PropertyRef Name="STOK_KODU" />
+          </Key>
+          <Property Name="IRSALIYE_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CARI_ISIM" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="STOK_KODU" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="MIKTAR" Type="Int32" />
+          <Property Name="SIPARIS_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EGEM_AKTIFURETIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="SIPARIS_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="MAKINA" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_KODU" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PLANLANAN_MIKTAR" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="CARI_ADI" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="ISEMRI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URETIM_MIKTARI" Type="Double" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EGEM_DEPO99BAKIYE">
+          <Key>
+            <PropertyRef Name="STOK_KODU" />
+          </Key>
+          <Property Name="STOK_KODU" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_BAKIYE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="SERI_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SERI_BAKIYE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DOF_NO" Type="Int32" />
+          <Property Name="KAYIT_YAPAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DOF_TARIH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZLUK_TANIMI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KREDI_NOTU" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="EGEM_143_DEPO_BAKIYE">
+          <Key>
+            <PropertyRef Name="STOK_KODU" />
+            <PropertyRef Name="BAKIYE" />
+          </Key>
+          <Property Name="STOK_KODU" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BAKIYE" Type="Decimal" Nullable="false" Precision="38" Scale="8" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="PILOTModelStoreContainer" CdmEntityContainer="PILOTEntities">
-          <EntitySetMapping Name="EGEM_10_DEPO_BAKIYE">
-            <EntityTypeMapping TypeName="PILOTModel.EGEM_10_DEPO_BAKIYE">
-              <MappingFragment StoreEntitySet="EGEM_10_DEPO_BAKIYE">
-                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+          <EntitySetMapping Name="EGEM_DEPOLAR_RAPOR">
+            <EntityTypeMapping TypeName="PILOTModel.EGEM_DEPOLAR_RAPOR">
+              <MappingFragment StoreEntitySet="EGEM_DEPOLAR_RAPOR">
+                <ScalarProperty Name="EGEM143_DEPO" ColumnName="EGEM143_DEPO" />
+                <ScalarProperty Name="EGEM2_DEPO" ColumnName="EGEM2_DEPO" />
+                <ScalarProperty Name="EGEMET_DEPO" ColumnName="EGEMET_DEPO" />
+                <ScalarProperty Name="EGEOFSET_DEPO" ColumnName="EGEOFSET_DEPO" />
+                <ScalarProperty Name="EGESAN_DEPO" ColumnName="EGESAN_DEPO" />
+                <ScalarProperty Name="HURDA_DEPO" ColumnName="HURDA_DEPO" />
+                <ScalarProperty Name="HAMMADDE_DEPO" ColumnName="HAMMADDE_DEPO" />
                 <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
-                <ScalarProperty Name="DEPO10" ColumnName="DEPO10" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="EGEM_1003_DEPO_BAKIYE">
-            <EntityTypeMapping TypeName="PILOTModel.EGEM_1003_DEPO_BAKIYE">
-              <MappingFragment StoreEntitySet="EGEM_1003_DEPO_BAKIYE">
-                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+          <EntitySetMapping Name="EGEM_PORT_AIRSALIYE">
+            <EntityTypeMapping TypeName="PILOTModel.EGEM_PORT_AIRSALIYE">
+              <MappingFragment StoreEntitySet="EGEM_PORT_AIRSALIYE">
+                <ScalarProperty Name="SIPARIS_NO" ColumnName="SIPARIS_NO" />
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
                 <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
-                <ScalarProperty Name="DEPO106" ColumnName="DEPO106" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+                <ScalarProperty Name="CARI_ISIM" ColumnName="CARI_ISIM" />
+                <ScalarProperty Name="IRSALIYE_NO" ColumnName="IRSALIYE_NO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="EGEM_1004_DEPO_BAKIYE">
-            <EntityTypeMapping TypeName="PILOTModel.EGEM_1004_DEPO_BAKIYE">
-              <MappingFragment StoreEntitySet="EGEM_1004_DEPO_BAKIYE">
-                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+          <EntitySetMapping Name="EGEM_AKTIFURETIM">
+            <EntityTypeMapping TypeName="PILOTModel.EGEM_AKTIFURETIM">
+              <MappingFragment StoreEntitySet="EGEM_AKTIFURETIM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="URETIM_MIKTARI" ColumnName="URETIM_MIKTARI" />
+                <ScalarProperty Name="ISEMRI" ColumnName="ISEMRI" />
+                <ScalarProperty Name="CARI_ADI" ColumnName="CARI_ADI" />
+                <ScalarProperty Name="PLANLANAN_MIKTAR" ColumnName="PLANLANAN_MIKTAR" />
                 <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+                <ScalarProperty Name="MAKINA" ColumnName="MAKINA" />
+                <ScalarProperty Name="SIPARIS_NO" ColumnName="SIPARIS_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_DEPO99BAKIYE">
+            <EntityTypeMapping TypeName="PILOTModel.EGEM_DEPO99BAKIYE">
+              <MappingFragment StoreEntitySet="EGEM_DEPO99BAKIYE">
+                <ScalarProperty Name="KREDI_NOTU" ColumnName="KREDI_NOTU" />
+                <ScalarProperty Name="UYGUNSUZLUK_TANIMI" ColumnName="UYGUNSUZLUK_TANIMI" />
+                <ScalarProperty Name="DOF_TARIH" ColumnName="DOF_TARIH" />
+                <ScalarProperty Name="KAYIT_YAPAN" ColumnName="KAYIT_YAPAN" />
+                <ScalarProperty Name="DOF_NO" ColumnName="DOF_NO" />
+                <ScalarProperty Name="SERI_BAKIYE" ColumnName="SERI_BAKIYE" />
+                <ScalarProperty Name="SERI_NO" ColumnName="SERI_NO" />
+                <ScalarProperty Name="STOK_BAKIYE" ColumnName="STOK_BAKIYE" />
+                <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_143_DEPO_BAKIYE">
+            <EntityTypeMapping TypeName="PILOTModel.EGEM_143_DEPO_BAKIYE">
+              <MappingFragment StoreEntitySet="EGEM_143_DEPO_BAKIYE">
                 <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EGEM_104_DEPO_BAKIYE">
-            <EntityTypeMapping TypeName="PILOTModel.EGEM_104_DEPO_BAKIYE">
-              <MappingFragment StoreEntitySet="EGEM_104_DEPO_BAKIYE">
+                <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
                 <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
-                <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
-                <ScalarProperty Name="DEPO104" ColumnName="DEPO104" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EGEM_99_DEPO_BAKIYE">
-            <EntityTypeMapping TypeName="PILOTModel.EGEM_99_DEPO_BAKIYE">
-              <MappingFragment StoreEntitySet="EGEM_99_DEPO_BAKIYE">
-                <ScalarProperty Name="SON_HAREKET" ColumnName="SON_HAREKET" />
-                <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
-                <ScalarProperty Name="BAKIYE" ColumnName="BAKIYE" />
-                <ScalarProperty Name="SIRA" ColumnName="SIRA" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -221,7 +298,7 @@ warning 6002: The table/view 'PILOT.dbo.EGEM_99_DEPO_BAKIYE' does not have a pri
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

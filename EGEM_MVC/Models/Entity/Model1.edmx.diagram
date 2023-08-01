@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="591027948d844e0eb5c105a3b1ef3e5f" Name="Diagram1">
-        <EntityTypeShape EntityType="PILOTModel.EGEM_10_DEPO_BAKIYE" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PILOTModel.EGEM_1003_DEPO_BAKIYE" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PILOTModel.EGEM_1004_DEPO_BAKIYE" Width="1.5" PointX="6.625" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PILOTModel.EGEM_104_DEPO_BAKIYE" Width="1.5" PointX="6.625" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PILOTModel.EGEM_99_DEPO_BAKIYE" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="591027948d844e0eb5c105a3b1ef3e5f" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="PILOTModel.EGEM_DEPOLAR_RAPOR" Width="2.5" PointX="0.625" PointY="0.75" />
+        <EntityTypeShape EntityType="PILOTModel.EGEM_PORT_AIRSALIYE" Width="1.5" PointX="3.625" PointY="1" />
+        <EntityTypeShape EntityType="PILOTModel.EGEM_AKTIFURETIM" Width="1.5" PointX="5.75" PointY="0.875" />
+        <EntityTypeShape EntityType="PILOTModel.EGEM_DEPO99BAKIYE" Width="1.5" PointX="2.125" PointY="4.375" />
+        <EntityTypeShape EntityType="PILOTModel.EGEM_143_DEPO_BAKIYE" Width="1.5" PointX="4.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1,0 +1,2011 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EGEM2023Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EGEM_DEPO_VARDIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TARIH" Type="nvarchar(max)" />
+          <Property Name="VARDIYA" Type="nvarchar(max)" />
+          <Property Name="DEPO_SORUMLU1" Type="nvarchar(max)" />
+          <Property Name="DEPO_SORUMLU2" Type="nvarchar(max)" />
+          <Property Name="KIMYASAL_DEPO" Type="nvarchar(max)" />
+          <Property Name="FORKLIFT_OPERATOR1" Type="nvarchar(max)" />
+          <Property Name="FORKLIFT_OPERATOR2" Type="nvarchar(max)" />
+          <Property Name="FORLIFT_DURUM" Type="nvarchar(max)" />
+          <Property Name="MAKINE_HAMMADDE_BESLEME_VERILEN" Type="nvarchar(max)" />
+          <Property Name="MAKINE_HAMMADDE_BESLEME_SIRADAKI" Type="nvarchar(max)" />
+          <Property Name="GELEN_KAMYON_ADET" Type="nvarchar(max)" />
+          <Property Name="GELEN_DIGER_URUN" Type="nvarchar(max)" />
+          <Property Name="SILINDIR_GIRIS" Type="nvarchar(max)" />
+          <Property Name="BEKLEYEN_DAT" Type="nvarchar(max)" />
+          <Property Name="BEKLEYEN_MAL_KABUL" Type="nvarchar(max)" />
+          <Property Name="TUTANAK" Type="nvarchar(max)" />
+          <Property Name="ACIKLAMA" Type="nvarchar(max)" />
+          <Property Name="PALET_DURUMU" Type="nvarchar(max)" />
+          <Property Name="IDARI_ISLEM" Type="nvarchar(max)" />
+          <Property Name="VARDIYA_KONTROL" Type="nvarchar(max)" />
+          <Property Name="MUREKKEP_BILGI" Type="nvarchar(max)" />
+          <Property Name="AKU_SARJ" Type="nvarchar(max)" />
+          <Property Name="DEPO_GELIS_SATINALMA" Type="nvarchar(max)" />
+          <Property Name="GECE_IS" Type="nvarchar(max)" />
+          <Property Name="KIMYASAL_DEPO_SORUMLU" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EGEM_DOF_TAKIP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KAYIT_YAPAN" Type="nvarchar(max)" />
+          <Property Name="TARIH" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZLUK_FAALIYET" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZLUK_SUREC" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZLUK_TANIMI" Type="nvarchar(max)" />
+          <Property Name="MUSTERI_ADI" Type="nvarchar(max)" />
+          <Property Name="STOK_ADI" Type="nvarchar(max)" />
+          <Property Name="STOK_KODU" Type="nvarchar(max)" />
+          <Property Name="SIPARIS_NO" Type="nvarchar(max)" />
+          <Property Name="BIRIM" Type="nvarchar" MaxLength="50" />
+          <Property Name="OPERATOR_ADI" Type="nvarchar(max)" />
+          <Property Name="MALZEME_KODU" Type="nvarchar(max)" />
+          <Property Name="MALZEME_ADI" Type="nvarchar(max)" />
+          <Property Name="HATALI_URUN_MIKTARI" Type="int" />
+          <Property Name="UYGUNSUZ_MAKINA" Type="nvarchar" MaxLength="50" />
+          <Property Name="UYGUNSUZ_GRUP" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZ_KOK_NEDEN" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZ_KOK_NEDEN_ACIK" Type="nvarchar(max)" />
+          <Property Name="DUZELTME_FAALIYET" Type="nvarchar(max)" />
+          <Property Name="DUZELTME_FAALIYET_TARIH" Type="datetime" />
+          <Property Name="DUZELTME_ISLEM" Type="nvarchar(max)" />
+          <Property Name="ONLEYICI_FAALIYET" Type="nvarchar(max)" />
+          <Property Name="ONLEYICI_FAALIYET_TARIH" Type="datetime" />
+          <Property Name="YAPILACAKLAR_ACIKLAMA_1" Type="nvarchar(max)" />
+          <Property Name="YAPILACAKLAR_SORUMLU_1" Type="nvarchar(max)" />
+          <Property Name="YAPILACAKLAR_TARIH_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="YAPILACAKLAR_ACIKLAMA_2" Type="nvarchar(max)" />
+          <Property Name="YAPILACAKLAR_SORUMLU_2" Type="nvarchar(max)" />
+          <Property Name="YAPILACAKLAR_TARIH_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="TAKIP_SONUCU_1" Type="nvarchar(max)" />
+          <Property Name="TAKIP_TARIH_1" Type="nvarchar" MaxLength="50" />
+          <Property Name="TAKIP_SONUCU_2" Type="nvarchar(max)" />
+          <Property Name="TAKIP_TARIH_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="YGG_KARARI" Type="nvarchar(max)" />
+          <Property Name="YGG_TARIH" Type="nvarchar" MaxLength="50" />
+          <Property Name="TAKIP_SONUCU_3" Type="nvarchar(max)" />
+          <Property Name="TAKIP_TAIH_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="TAKIP_SONUCU_4" Type="nvarchar(max)" />
+          <Property Name="TAKIP_TARIH_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOF_SAHIP" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN_AD_SOY" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN_BIRIM" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN_UNVAN" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN_ANALIZ_KONU" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN_BAS_TAR" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN_BIT_TAR" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN1" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN2" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN3" Type="nvarchar(max)" />
+          <Property Name="KOK_NEDEN4" Type="nvarchar(max)" />
+          <Property Name="COZUM" Type="nvarchar(max)" />
+          <Property Name="ONERI" Type="nvarchar(max)" />
+          <Property Name="DF_KAPATMA_SURE" Type="nvarchar(max)" />
+          <Property Name="DOF_DURUM" Type="nvarchar(max)" />
+          <Property Name="HATA_BULAN" Type="nvarchar(max)" />
+          <Property Name="HATALI_MALZEME_MIKTARI" Type="int" />
+          <Property Name="HATALI_MALZEME_BIRIM" Type="nvarchar(max)" />
+          <Property Name="KREDI_NOTU" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="GECICI_AKSIYON" Type="smalldatetime" />
+          <Property Name="KALICI_AKSIYON" Type="smalldatetime" />
+          <Property Name="DURUS_SURE" Type="int" />
+          <Property Name="SATINALMA_KARAR" Type="nvarchar(max)" />
+          <Property Name="SATINALMA_TEDARIK_AKSIYON" Type="nvarchar(max)" />
+          <Property Name="DOF_BILGI" Type="nvarchar(max)" />
+          <Property Name="PACKAGE_ID" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZLUK_TANIMI_SATINALMA" Type="nvarchar(max)" />
+          <Property Name="TEDARIKCI_AKSIYONU_SATINALMA" Type="nvarchar(max)" />
+          <Property Name="IMAGE_1" Type="nvarchar(max)" />
+          <Property Name="IMAGE_1_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_2" Type="nvarchar(max)" />
+          <Property Name="IMAGE_2_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_3" Type="nvarchar(max)" />
+          <Property Name="IMAGE_3_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_4" Type="nvarchar(max)" />
+          <Property Name="IMAGE_4_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_5" Type="nvarchar(max)" />
+          <Property Name="IMAGE_5_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_6" Type="nvarchar(max)" />
+          <Property Name="IMAGE_6_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_7" Type="nvarchar(max)" />
+          <Property Name="IMAGE_7_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_8" Type="nvarchar(max)" />
+          <Property Name="IMAGE_8_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_9" Type="nvarchar(max)" />
+          <Property Name="IMAGE_9_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_10" Type="nvarchar(max)" />
+          <Property Name="IMAGE_10_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_11" Type="nvarchar(max)" />
+          <Property Name="IMAGE_11_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_12" Type="nvarchar(max)" />
+          <Property Name="IMAGE_12_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_13" Type="nvarchar(max)" />
+          <Property Name="IMAGE_13_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_14" Type="nvarchar(max)" />
+          <Property Name="IMAGE_14_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_15" Type="nvarchar(max)" />
+          <Property Name="IMAGE_15_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_16" Type="nvarchar(max)" />
+          <Property Name="IMAGE_16_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_17" Type="nvarchar(max)" />
+          <Property Name="IMAGE_17_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_18" Type="nvarchar(max)" />
+          <Property Name="IMAGE_18_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_19" Type="nvarchar(max)" />
+          <Property Name="IMAGE_19_FILE" Type="nvarchar(max)" />
+          <Property Name="IMAGE_20" Type="nvarchar(max)" />
+          <Property Name="IMAGE_20_FILE" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EGEM_ESNEK_BASKI_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="URUN_KODU" Type="nvarchar" MaxLength="50" />
+          <Property Name="URUN_ADI" Type="nvarchar(max)" />
+          <Property Name="SIPARIS_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZAMAN" Type="nvarchar(max)" />
+          <Property Name="BOBIN_NO" Type="int" />
+          <Property Name="HAMMADDE_KONTROL" Type="nvarchar(max)" />
+          <Property Name="BOBIN_ENI" Type="nvarchar(max)" />
+          <Property Name="FOTOSEL_ARALIGI" Type="nvarchar(max)" />
+          <Property Name="NET_BASKI_ENI" Type="nvarchar(max)" />
+          <Property Name="BASKI_YONU" Type="nvarchar(max)" />
+          <Property Name="FILM_TIPI" Type="nvarchar(max)" />
+          <Property Name="BARKOD_OKUNUR" Type="nvarchar(max)" />
+          <Property Name="ACILIS_YONU" Type="nvarchar(max)" />
+          <Property Name="ARKA_KAPANMA_SEKLI" Type="nvarchar(max)" />
+          <Property Name="ICERIK_KONTROL" Type="nvarchar(max)" />
+          <Property Name="RENK_UYGUN" Type="nvarchar(max)" />
+          <Property Name="RENK_UYGUN_GOZ" Type="nvarchar(max)" />
+          <Property Name="BASKI_KAYIK" Type="nvarchar(max)" />
+          <Property Name="GORSEL_KONTROL" Type="nvarchar(max)" />
+          <Property Name="ADEZYON" Type="nvarchar(max)" />
+          <Property Name="KURUMA" Type="nvarchar(max)" />
+          <Property Name="TONLAMA" Type="nvarchar(max)" />
+          <Property Name="SAKAL" Type="nvarchar(max)" />
+          <Property Name="CIZGI" Type="nvarchar(max)" />
+          <Property Name="ISIL_YAPISMA" Type="nvarchar(max)" />
+          <Property Name="MUREKKEP_MIKTAR" Type="nvarchar(max)" />
+          <Property Name="BIRIM_AGIRLIK" Type="nvarchar(max)" />
+          <Property Name="COF" Type="nvarchar(max)" />
+          <Property Name="GC_TEST" Type="nvarchar(max)" />
+          <Property Name="BOBIN_ICBAYRAK_SAYI" Type="nvarchar(max)" />
+          <Property Name="MAKINE" Type="nvarchar(max)" />
+          <Property Name="KONTROL_ONAY" Type="nvarchar(max)" />
+          <Property Name="SILINDIR_KOD_KONTROL" Type="nvarchar(max)" />
+          <Property Name="GLOSS" Type="nvarchar(max)" />
+          <Property Name="NOK_GORSEL" Type="nvarchar(max)" />
+          <Property Name="GORSEL_ADRES" Type="nvarchar(max)" />
+          <Property Name="CITILEME" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EGEM_ESNEK_DILIMLEME_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="URUN_KODU" Type="nvarchar" MaxLength="50" />
+          <Property Name="URUN_ADI" Type="nvarchar(max)" />
+          <Property Name="SIPARIS_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZAMAN" Type="smalldatetime" />
+          <Property Name="BOBIN_NO" Type="int" />
+          <Property Name="DILME_ENI" Type="nvarchar(max)" />
+          <Property Name="FOTOSEL_ARALIGI" Type="nvarchar(max)" />
+          <Property Name="ACILIS_YONU" Type="nvarchar(max)" />
+          <Property Name="IC_CAP" Type="nvarchar(max)" />
+          <Property Name="EK_SAYI" Type="nvarchar(max)" />
+          <Property Name="BOBIN_CAP" Type="nvarchar(max)" />
+          <Property Name="GORSEL_KONTROL" Type="nvarchar(max)" />
+          <Property Name="KESIM_KAYIK" Type="nvarchar(max)" />
+          <Property Name="TONLAMA" Type="nvarchar(max)" />
+          <Property Name="SAKAL" Type="nvarchar(max)" />
+          <Property Name="CIZGI" Type="nvarchar(max)" />
+          <Property Name="RENK_UYGUN" Type="nvarchar(max)" />
+          <Property Name="SARIM_DUZGUN" Type="nvarchar(max)" />
+          <Property Name="BOBIN_EKI_KONTROL" Type="nvarchar(max)" />
+          <Property Name="BOBIN_BARKOD_OKUT" Type="nvarchar(max)" />
+          <Property Name="BARKOD_KONTROL" Type="nvarchar(max)" />
+          <Property Name="KALITE_ONAY" Type="nvarchar(max)" />
+          <Property Name="MAKINE" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EGEM_ESNEK_LAMINASYON_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="URUN_KODU" Type="nvarchar" MaxLength="50" />
+          <Property Name="URUN_ADI" Type="nvarchar(max)" />
+          <Property Name="SIPARIS_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="MAKINE" Type="nvarchar(max)" />
+          <Property Name="ZAMAN" Type="smalldatetime" />
+          <Property Name="BOBIN_NO" Type="int" />
+          <Property Name="BOBIN_ENI" Type="nvarchar(max)" />
+          <Property Name="FOTOSEL_ARALIGI" Type="nvarchar(max)" />
+          <Property Name="AL_FOLYO_YONU" Type="nvarchar(max)" />
+          <Property Name="TUTKAL_GRAMAJ" Type="nvarchar(max)" />
+          <Property Name="BIRIM_AGIRLIK" Type="nvarchar(max)" />
+          <Property Name="YAPISMA_KONTROL" Type="nvarchar(max)" />
+          <Property Name="GORSEL_KONTROL" Type="nvarchar(max)" />
+          <Property Name="BENCIK_KONTROL" Type="nvarchar(max)" />
+          <Property Name="ISIL_YAPISMA_KONT" Type="nvarchar(max)" />
+          <Property Name="LAMINASYON_KUVVETI" Type="nvarchar(max)" />
+          <Property Name="COF_TEST" Type="nvarchar(max)" />
+          <Property Name="KALITE_ONAY" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EGEM_GRAVUR_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="urun_kodu" Type="nvarchar" MaxLength="100" />
+          <Property Name="urun_adi" Type="nvarchar" MaxLength="250" />
+          <Property Name="sipno" Type="nvarchar" MaxLength="100" />
+          <Property Name="tarih" Type="nvarchar" MaxLength="50" />
+          <Property Name="saat" Type="nvarchar" MaxLength="50" />
+          <Property Name="palet_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="hammadde_kontrol" Type="nvarchar(max)" />
+          <Property Name="hammadde_fiziki" Type="nvarchar(max)" />
+          <Property Name="silindir_kod_kontrol" Type="nvarchar(max)" />
+          <Property Name="baski_icerik" Type="nvarchar(max)" />
+          <Property Name="baski_register" Type="nvarchar(max)" />
+          <Property Name="onay_num_renk_gorsel" Type="nvarchar(max)" />
+          <Property Name="onay_num_renk_spectro" Type="nvarchar(max)" />
+          <Property Name="yelpaze_renk_kont" Type="nvarchar(max)" />
+          <Property Name="barkod_okut" Type="nvarchar(max)" />
+          <Property Name="isil_yapis_kont" Type="nvarchar(max)" />
+          <Property Name="parlaklik" Type="nvarchar(max)" />
+          <Property Name="cof_test_dinamik" Type="nvarchar(max)" />
+          <Property Name="cof_test_statik" Type="nvarchar(max)" />
+          <Property Name="asinma_test" Type="nvarchar(max)" />
+          <Property Name="baski_hata" Type="nvarchar(max)" />
+          <Property Name="silindir_vuruk" Type="nvarchar(max)" />
+          <Property Name="lak_kuruma" Type="nvarchar(max)" />
+          <Property Name="bicak_film" Type="nvarchar(max)" />
+          <Property Name="kesim_gorsel" Type="nvarchar(max)" />
+          <Property Name="kesim_ebat" Type="nvarchar(max)" />
+          <Property Name="tabaka_hasar" Type="nvarchar(max)" />
+          <Property Name="montaj_pilyaj" Type="nvarchar(max)" />
+          <Property Name="kirim_direnc" Type="nvarchar(max)" />
+          <Property Name="kutu_yapisma" Type="nvarchar(max)" />
+          <Property Name="emdeb_gorsel" Type="nvarchar(max)" />
+          <Property Name="emdeb_register" Type="nvarchar(max)" />
+          <Property Name="emdeb_kontrol" Type="nvarchar(max)" />
+          <Property Name="kulakcik_katlan" Type="nvarchar(max)" />
+          <Property Name="palet_etiket" Type="nvarchar(max)" />
+          <Property Name="kontrol_onay" Type="nvarchar(max)" />
+          <Property Name="bobin_patlak" Type="nvarchar(max)" />
+          <Property Name="MAKINE" Type="nvarchar(max)" />
+          <Property Name="yedek" Type="nvarchar(max)" />
+          <Property Name="zaman" Type="smalldatetime" />
+          <Property Name="bundle_yuksek" Type="nvarchar(max)" />
+          <Property Name="hammadde_oba" Type="nvarchar(max)" />
+          <Property Name="palet_yerlesim" Type="nvarchar(max)" />
+          <Property Name="palet_gorsel" Type="nvarchar(max)" />
+          <Property Name="hammadde_gorsel_kontrol" Type="nvarchar(max)" />
+          <Property Name="makine_temiz_renk" Type="nvarchar(max)" />
+          <Property Name="kirpinti_kontrol" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EGEM_KALITE_VARDIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TARIH" Type="nvarchar(max)" />
+          <Property Name="VARDIYA" Type="nvarchar(max)" />
+          <Property Name="KALITE_VARDIYA_SORUMLU1" Type="nvarchar(max)" />
+          <Property Name="KALITE_VARDIYA_SORUMLU2" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_1" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_2" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_3" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_4" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_5" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_6" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_1_MAK" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_2_MAK" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_3_MAK" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_4_MAK" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_5_MAK" Type="nvarchar(max)" />
+          <Property Name="K_PROSESS_6_MAK" Type="nvarchar(max)" />
+          <Property Name="LEM1_ACIK1" Type="nvarchar(max)" />
+          <Property Name="LEM1_ACIK2" Type="nvarchar(max)" />
+          <Property Name="LEM1_ACIK3" Type="nvarchar(max)" />
+          <Property Name="LEM1_ACIK4" Type="nvarchar(max)" />
+          <Property Name="LEM1_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="LEM1_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="LEM2_ACIK1" Type="nvarchar(max)" />
+          <Property Name="LEM2_ACIK2" Type="nvarchar(max)" />
+          <Property Name="LEM2_ACIK3" Type="nvarchar(max)" />
+          <Property Name="LEM2_ACIK4" Type="nvarchar(max)" />
+          <Property Name="LEM2_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="LEM2_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="LEM3_ACIK1" Type="nvarchar(max)" />
+          <Property Name="LEM3_ACIK2" Type="nvarchar(max)" />
+          <Property Name="LEM3_ACIK3" Type="nvarchar(max)" />
+          <Property Name="LEM3_ACIK4" Type="nvarchar(max)" />
+          <Property Name="LEM3_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="LEM3_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="KBA_ACIK1" Type="nvarchar(max)" />
+          <Property Name="KBA_ACIK2" Type="nvarchar(max)" />
+          <Property Name="KBA_ACIK3" Type="nvarchar(max)" />
+          <Property Name="KBA_ACIK4" Type="nvarchar(max)" />
+          <Property Name="KBA_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="KBA_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="R700_ACIK1" Type="nvarchar(max)" />
+          <Property Name="R700_ACIK2" Type="nvarchar(max)" />
+          <Property Name="R700_ACIK3" Type="nvarchar(max)" />
+          <Property Name="R700_ACIK4" Type="nvarchar(max)" />
+          <Property Name="R700_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="R700_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="B102_ACIK1" Type="nvarchar(max)" />
+          <Property Name="B102_ACIK2" Type="nvarchar(max)" />
+          <Property Name="B102_ACIK3" Type="nvarchar(max)" />
+          <Property Name="B102_ACIK4" Type="nvarchar(max)" />
+          <Property Name="B102_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="B102_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="B104_ACIK1" Type="nvarchar(max)" />
+          <Property Name="B104_ACIK2" Type="nvarchar(max)" />
+          <Property Name="B104_ACIK3" Type="nvarchar(max)" />
+          <Property Name="B104_ACIK4" Type="nvarchar(max)" />
+          <Property Name="B104_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="B104_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="B106P_ACIK1" Type="nvarchar(max)" />
+          <Property Name="B106P_ACIK2" Type="nvarchar(max)" />
+          <Property Name="B106P_ACIK3" Type="nvarchar(max)" />
+          <Property Name="B106P_ACIK4" Type="nvarchar(max)" />
+          <Property Name="B106P_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="B106P_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="B106L_ACIK1" Type="nvarchar(max)" />
+          <Property Name="B106L_ACIK2" Type="nvarchar(max)" />
+          <Property Name="B106L_ACIK3" Type="nvarchar(max)" />
+          <Property Name="B106L_ACIK4" Type="nvarchar(max)" />
+          <Property Name="B106L_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="B106L_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="EXPERTFOIL_ACIK1" Type="nvarchar(max)" />
+          <Property Name="EXPERTFOIL_ACIK2" Type="nvarchar(max)" />
+          <Property Name="EXPERTFOIL_ACIK3" Type="nvarchar(max)" />
+          <Property Name="EXPERTFOIL_ACIK4" Type="nvarchar(max)" />
+          <Property Name="EXPERTFOIL_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="EXPERTFOIL_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="FOILMASTER_ACIK1" Type="nvarchar(max)" />
+          <Property Name="FOILMASTER_ACIK2" Type="nvarchar(max)" />
+          <Property Name="FOILMASTER_ACIK3" Type="nvarchar(max)" />
+          <Property Name="FOILMASTER_ACIK4" Type="nvarchar(max)" />
+          <Property Name="FOILMASTER_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="FOILMASTER_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="MILLTEX_ACIK1" Type="nvarchar(max)" />
+          <Property Name="MILLTEX_ACIK2" Type="nvarchar(max)" />
+          <Property Name="MILLTEX_ACIK3" Type="nvarchar(max)" />
+          <Property Name="MILLTEX_ACIK4" Type="nvarchar(max)" />
+          <Property Name="MILLTEX_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="MILLTEX_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="POLAR_ACIK1" Type="nvarchar(max)" />
+          <Property Name="POLAR_ACIK2" Type="nvarchar(max)" />
+          <Property Name="POLAR_ACIK3" Type="nvarchar(max)" />
+          <Property Name="POLAR_ACIK4" Type="nvarchar(max)" />
+          <Property Name="POLAR_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="POLAR_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="OMEGA_ACIK1" Type="nvarchar(max)" />
+          <Property Name="OMEGA_ACIK2" Type="nvarchar(max)" />
+          <Property Name="OMEGA_ACIK3" Type="nvarchar(max)" />
+          <Property Name="OMEGA_ACIK4" Type="nvarchar(max)" />
+          <Property Name="OMEGA_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="OMEGA_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="PENCERE_ACIK1" Type="nvarchar(max)" />
+          <Property Name="PENCERE_ACIK2" Type="nvarchar(max)" />
+          <Property Name="PENCERE_ACIK3" Type="nvarchar(max)" />
+          <Property Name="PENCERE_ACIK4" Type="nvarchar(max)" />
+          <Property Name="PENCERE_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="PENCERE_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="ROTOMEC_ACIK1" Type="nvarchar(max)" />
+          <Property Name="ROTOMEC_ACIK2" Type="nvarchar(max)" />
+          <Property Name="ROTOMEC_ACIK3" Type="nvarchar(max)" />
+          <Property Name="ROTOMEC_ACIK4" Type="nvarchar(max)" />
+          <Property Name="ROTOMEC_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="ROTOMEC_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="TITAN_ACIK1" Type="nvarchar(max)" />
+          <Property Name="TITAN_ACIK2" Type="nvarchar(max)" />
+          <Property Name="TITAN_ACIK3" Type="nvarchar(max)" />
+          <Property Name="TITAN_ACIK4" Type="nvarchar(max)" />
+          <Property Name="TITAN_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="TITAN_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="REVOMAC_ACIK1" Type="nvarchar(max)" />
+          <Property Name="REVOMAC_ACIK2" Type="nvarchar(max)" />
+          <Property Name="REVOMAC_ACIK3" Type="nvarchar(max)" />
+          <Property Name="REVOMAC_ACIK4" Type="nvarchar(max)" />
+          <Property Name="REVOMAC_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="REVOMAC_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="NORD_ACIK1" Type="nvarchar(max)" />
+          <Property Name="NORD_ACIK2" Type="nvarchar(max)" />
+          <Property Name="NORD_ACIK3" Type="nvarchar(max)" />
+          <Property Name="NORD_ACIK4" Type="nvarchar(max)" />
+          <Property Name="NORD_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="NORD_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="ESNEK_AKTAR_ACIK1" Type="nvarchar(max)" />
+          <Property Name="ESNEK_AKTAR_ACIK2" Type="nvarchar(max)" />
+          <Property Name="ESNEK_AKTAR_ACIK3" Type="nvarchar(max)" />
+          <Property Name="ESNEK_AKTAR_ACIK4" Type="nvarchar(max)" />
+          <Property Name="ESNEK_AKTAR_BAS_AW" Type="nvarchar(max)" />
+          <Property Name="ESNEK_AKTAR_MAKINE_DENEME" Type="nvarchar(max)" />
+          <Property Name="BASKI_PROVA" Type="nvarchar(max)" />
+          <Property Name="ARIZA_DURUS" Type="nvarchar(max)" />
+          <Property Name="CREASE_TOLERANS" Type="nvarchar(max)" />
+          <Property Name="COF_OLCUMU" Type="nvarchar(max)" />
+          <Property Name="TEST_YAPILAMAYAN" Type="nvarchar(max)" />
+          <Property Name="HERHANGI_SEBEP" Type="nvarchar(max)" />
+          <Property Name="TESPIT_NOK" Type="nvarchar(max)" />
+          <Property Name="ACIK_DOF" Type="nvarchar(max)" />
+          <Property Name="HATA_PALET" Type="nvarchar(max)" />
+          <Property Name="YURU_ONAY" Type="nvarchar(max)" />
+          <Property Name="KATLAMA_ARSIV" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZ_HAMMADDE" Type="nvarchar(max)" />
+          <Property Name="DURDURULAN_ONAY" Type="nvarchar(max)" />
+          <Property Name="ARIZALI_CIHAZ" Type="nvarchar(max)" />
+          <Property Name="GELMEYEN_PERSONEL" Type="nvarchar(max)" />
+          <Property Name="IDARI_SORUN" Type="nvarchar(max)" />
+          <Property Name="LEMANIC_SAHA" Type="nvarchar(max)" />
+          <Property Name="OFFSET_SAHA" Type="nvarchar(max)" />
+          <Property Name="ROTOMEC_SAHA" Type="nvarchar(max)" />
+          <Property Name="AYIKLAMA_SAHA" Type="nvarchar(max)" />
+          <Property Name="LABORATUAR_SAHA" Type="nvarchar(max)" />
+          <Property Name="DIGER" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EGEM_MVC_USER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AD_SOYAD" Type="nvarchar(max)" />
+          <Property Name="SIFRE" Type="nvarchar(max)" />
+          <Property Name="ROL" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EGEM_OFSET_BASKI_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SIPARISNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="STOK_KODU" Type="nvarchar" MaxLength="50" />
+          <Property Name="STOK_ADI" Type="nvarchar" MaxLength="100" />
+          <Property Name="PROSES" Type="nchar" MaxLength="50" />
+          <Property Name="TARIH" Type="nvarchar" MaxLength="50" />
+          <Property Name="SAAT" Type="nvarchar" MaxLength="50" />
+          <Property Name="CALISILAN_MKN" Type="nvarchar" MaxLength="50" />
+          <Property Name="URUN_ADI_KNT" Type="nvarchar" MaxLength="50" />
+          <Property Name="PALET_NO" Type="nvarchar(max)" />
+          <Property Name="HAMMADDE_KONTROL" Type="nvarchar(max)" />
+          <Property Name="GRAMAJ_KONTROL" Type="nvarchar(max)" />
+          <Property Name="EBAT_KONTROL" Type="nvarchar(max)" />
+          <Property Name="CAPRAZ_KONTROL" Type="nvarchar(max)" />
+          <Property Name="YELPAZE_KONTROL" Type="nvarchar(max)" />
+          <Property Name="YAPISMA_KONTROL" Type="nvarchar(max)" />
+          <Property Name="SU_YOLU_KONTROL" Type="nvarchar(max)" />
+          <Property Name="MUREKKEP_KONTROL" Type="nvarchar(max)" />
+          <Property Name="ARTWORK_UYGUNLUK" Type="nvarchar(max)" />
+          <Property Name="BICAK_KONTROL" Type="nvarchar(max)" />
+          <Property Name="POZA_KONTROL" Type="nvarchar(max)" />
+          <Property Name="TONLAMA_SAKAL_KONTROL" Type="nvarchar(max)" />
+          <Property Name="GORSEL_KONTROL" Type="nvarchar(max)" />
+          <Property Name="LAK_BOS_KONTROL" Type="nvarchar(max)" />
+          <Property Name="LAK_AL_KONTROL" Type="nvarchar(max)" />
+          <Property Name="PARLAKLIK" Type="nvarchar(max)" />
+          <Property Name="ASINMA" Type="nvarchar(max)" />
+          <Property Name="COF_KINETIK_TEST" Type="nvarchar(max)" />
+          <Property Name="COF_STATIK_TEST" Type="nvarchar(max)" />
+          <Property Name="ISIL_YAPISMA" Type="nvarchar(max)" />
+          <Property Name="RENK_KONTROL" Type="nvarchar(max)" />
+          <Property Name="BARKOD_KONTROL" Type="nvarchar(max)" />
+          <Property Name="ASETAT_KONTROL" Type="nvarchar(max)" />
+          <Property Name="KORONA_YONU" Type="nvarchar(max)" />
+          <Property Name="SILIKONLU_BANT" Type="nvarchar(max)" />
+          <Property Name="KONTROL_EDEN" Type="nvarchar(max)" />
+          <Property Name="ACIKLAMA" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EGEM_OFSET_BITIRME_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SIPARISNO" Type="nvarchar" MaxLength="50" />
+          <Property Name="STOK_KODU" Type="nvarchar" MaxLength="50" />
+          <Property Name="STOK_ADI" Type="nvarchar" MaxLength="100" />
+          <Property Name="PROSES" Type="nchar" MaxLength="50" />
+          <Property Name="TARIH" Type="nvarchar" MaxLength="50" />
+          <Property Name="SAAT" Type="nvarchar" MaxLength="50" />
+          <Property Name="CALISILAN_MKN" Type="nvarchar" MaxLength="50" />
+          <Property Name="URUN_ADI_KNT" Type="nvarchar" MaxLength="50" />
+          <Property Name="PALET_NO" Type="nvarchar(max)" />
+          <Property Name="HAMMADDE_KONTROL" Type="nvarchar" MaxLength="50" />
+          <Property Name="SU_YOLU" Type="nvarchar" MaxLength="50" />
+          <Property Name="ARTWORK_UYGUNLUK" Type="nvarchar" MaxLength="50" />
+          <Property Name="BICAK_FILM_KONTROL" Type="nvarchar" MaxLength="50" />
+          <Property Name="GORSEL_KONTROL" Type="nvarchar" MaxLength="50" />
+          <Property Name="BARKOD_KONTROL" Type="nvarchar" MaxLength="50" />
+          <Property Name="PILYAJ_KONTROL" Type="nvarchar" MaxLength="50" />
+          <Property Name="KASIM_PATLATMA" Type="nvarchar" MaxLength="50" />
+          <Property Name="KIRIM_DIRENCI" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIK_YERLERI_KONTROL" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMBOSS_DEBOSS_KONTROL" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMBOSS_DEBOSS_REGISTER" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMBOSS_DEBOSS_KONTROL2" Type="nvarchar" MaxLength="50" />
+          <Property Name="TUM_PZS_KONT" Type="nvarchar" MaxLength="50" />
+          <Property Name="TS_UYGUNLUK" Type="nvarchar" MaxLength="50" />
+          <Property Name="PALET_GENEL_KONT" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACIKLAMA" Type="nvarchar(max)" />
+          <Property Name="KONTROL_EDEN" Type="nvarchar" MaxLength="100" />
+          <Property Name="BUNDLE_YUKSEK" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="EO_GRAVUR_VARDIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VARDIYA" Type="nvarchar(max)" />
+          <Property Name="TARIH" Type="nvarchar(max)" />
+          <Property Name="ISEMRI" Type="nvarchar(max)" />
+          <Property Name="URETILEN_PALET" Type="nvarchar(max)" />
+          <Property Name="DIE_VURUSU" Type="nvarchar(max)" />
+          <Property Name="VARD_CALISAN" Type="nvarchar(max)" />
+          <Property Name="MAKINE_HIZ" Type="nvarchar(max)" />
+          <Property Name="RULO_TEM" Type="nvarchar(max)" />
+          <Property Name="FOTOSEL_TEM" Type="nvarchar(max)" />
+          <Property Name="PRESOR_TEM" Type="nvarchar(max)" />
+          <Property Name="GOZAYNA_TEM" Type="nvarchar(max)" />
+          <Property Name="UNITE_TEM" Type="nvarchar(max)" />
+          <Property Name="ZEMIN_EPOKSI_TEM" Type="nvarchar(max)" />
+          <Property Name="EMERGENCY_KONTR" Type="nvarchar(max)" />
+          <Property Name="EMBOS_UNIT" Type="nvarchar(max)" />
+          <Property Name="KESIM_BOLUM" Type="nvarchar(max)" />
+          <Property Name="MONOMATIN_KONT" Type="nvarchar(max)" />
+          <Property Name="PALETLEME_TEM" Type="nvarchar(max)" />
+          <Property Name="LEMANIC_URETIM_ALANI" Type="nvarchar(max)" />
+          <Property Name="ARABA_PARCA" Type="nvarchar(max)" />
+          <Property Name="MAKINE_ARIZA" Type="nvarchar(max)" />
+          <Property Name="BOBIN_MUREKKEP" Type="nvarchar(max)" />
+          <Property Name="SILINDIR" Type="nvarchar(max)" />
+          <Property Name="DIGER" Type="nvarchar(max)" />
+          <Property Name="TESLIM_EDEN" Type="nvarchar(max)" />
+          <Property Name="TESLIM_ALAN" Type="nvarchar(max)" />
+          <Property Name="RULO_TEM1" Type="nvarchar(max)" />
+          <Property Name="FOTOSEL_TEM1" Type="nvarchar(max)" />
+          <Property Name="PRESOR_TEM1" Type="nvarchar(max)" />
+          <Property Name="GOZAYNA_TEM1" Type="nvarchar(max)" />
+          <Property Name="UNITE_TEM1" Type="nvarchar(max)" />
+          <Property Name="ZEMIN_EPOKSI_TEM1" Type="nvarchar(max)" />
+          <Property Name="EMERGENCY_KONTR1" Type="nvarchar(max)" />
+          <Property Name="EMBOS_UNIT1" Type="nvarchar(max)" />
+          <Property Name="KESIM_BOLUM1" Type="nvarchar(max)" />
+          <Property Name="MONOMATIN_KONT1" Type="nvarchar(max)" />
+          <Property Name="PALETLEME_TEM1" Type="nvarchar(max)" />
+          <Property Name="LEMANIC_URETIM_ALANI1" Type="nvarchar(max)" />
+          <Property Name="ARABA_PARCA1" Type="nvarchar(max)" />
+          <Property Name="MAKINE_ARIZA1" Type="nvarchar(max)" />
+          <Property Name="BOBIN_MUREKKEP1" Type="nvarchar(max)" />
+          <Property Name="SILINDIR1" Type="nvarchar(max)" />
+          <Property Name="ISDEGISIM_SAY" Type="nvarchar(max)" />
+          <Property Name="TOP_FIRE" Type="nvarchar(max)" />
+          <Property Name="URUN_KODU" Type="nvarchar(max)" />
+          <Property Name="MAKINE" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EGEM2023.dbo.EGEM_DOFLIST' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EGEM_DOFLIST">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TARIH" Type="nvarchar(max)" />
+          <Property Name="KAYIT_YAPAN" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZLUK_FAALIYET" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZLUK_SUREC" Type="nvarchar(max)" />
+          <Property Name="UYGUNSUZLUK_TANIMI" Type="nvarchar(max)" />
+          <Property Name="IMAGE_1" Type="nvarchar(max)" />
+          <Property Name="IMAGE_2" Type="nvarchar(max)" />
+          <Property Name="IMAGE_3" Type="nvarchar(max)" />
+          <Property Name="IMAGE_4" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EGEM2023.dbo.EGEM_ORJINAL_IMAJ' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EGEM_ORJINAL_IMAJ">
+          <Key>
+            <PropertyRef Name="STOK_KODU" />
+          </Key>
+          <Property Name="STOK_KODU" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="orjinal_imaj" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'EGEM2023.dbo.EGEM_PROJESILINDIR_TALEP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EGEM_PROJESILINDIR_TALEP">
+          <Key>
+            <PropertyRef Name="SIPARIS_NO" />
+            <PropertyRef Name="STOK_KODU" />
+          </Key>
+          <Property Name="SIPARIS_NO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="TALEP_NO" Type="varchar" MaxLength="15" />
+          <Property Name="CARI_KODU" Type="varchar" MaxLength="35" />
+          <Property Name="CARI_ISIM" Type="varchar" MaxLength="100" />
+          <Property Name="STOK_KODU" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="STOK_ADI" Type="varchar" MaxLength="100" />
+          <Property Name="SIPARIS_TARIHI" Type="varchar" MaxLength="30" />
+          <Property Name="MIKTAR" Type="decimal" Precision="28" Scale="8" />
+        </EntityType>
+        <EntityContainer Name="EGEM2023ModelStoreContainer">
+          <EntitySet Name="EGEM_DEPO_VARDIYA" EntityType="Self.EGEM_DEPO_VARDIYA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_DOF_TAKIP" EntityType="Self.EGEM_DOF_TAKIP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_ESNEK_BASKI_KALITE" EntityType="Self.EGEM_ESNEK_BASKI_KALITE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_ESNEK_DILIMLEME_KALITE" EntityType="Self.EGEM_ESNEK_DILIMLEME_KALITE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_ESNEK_LAMINASYON_KALITE" EntityType="Self.EGEM_ESNEK_LAMINASYON_KALITE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_GRAVUR_KALITE" EntityType="Self.EGEM_GRAVUR_KALITE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_KALITE_VARDIYA" EntityType="Self.EGEM_KALITE_VARDIYA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_MVC_USER" EntityType="Self.EGEM_MVC_USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_OFSET_BASKI_KALITE" EntityType="Self.EGEM_OFSET_BASKI_KALITE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_OFSET_BITIRME_KALITE" EntityType="Self.EGEM_OFSET_BITIRME_KALITE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EO_GRAVUR_VARDIYA" EntityType="Self.EO_GRAVUR_VARDIYA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EGEM_DOFLIST" EntityType="Self.EGEM_DOFLIST" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EGEM_DOFLIST].[ID] AS [ID], 
+    [EGEM_DOFLIST].[TARIH] AS [TARIH], 
+    [EGEM_DOFLIST].[KAYIT_YAPAN] AS [KAYIT_YAPAN], 
+    [EGEM_DOFLIST].[UYGUNSUZLUK_FAALIYET] AS [UYGUNSUZLUK_FAALIYET], 
+    [EGEM_DOFLIST].[UYGUNSUZLUK_SUREC] AS [UYGUNSUZLUK_SUREC], 
+    [EGEM_DOFLIST].[UYGUNSUZLUK_TANIMI] AS [UYGUNSUZLUK_TANIMI], 
+    [EGEM_DOFLIST].[IMAGE_1] AS [IMAGE_1], 
+    [EGEM_DOFLIST].[IMAGE_2] AS [IMAGE_2], 
+    [EGEM_DOFLIST].[IMAGE_3] AS [IMAGE_3], 
+    [EGEM_DOFLIST].[IMAGE_4] AS [IMAGE_4]
+    FROM [dbo].[EGEM_DOFLIST] AS [EGEM_DOFLIST]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EGEM_ORJINAL_IMAJ" EntityType="Self.EGEM_ORJINAL_IMAJ" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EGEM_ORJINAL_IMAJ].[STOK_KODU] AS [STOK_KODU], 
+    [EGEM_ORJINAL_IMAJ].[orjinal_imaj] AS [orjinal_imaj]
+    FROM [dbo].[EGEM_ORJINAL_IMAJ] AS [EGEM_ORJINAL_IMAJ]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EGEM_PROJESILINDIR_TALEP" EntityType="Self.EGEM_PROJESILINDIR_TALEP" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EGEM_PROJESILINDIR_TALEP].[SIPARIS_NO] AS [SIPARIS_NO], 
+    [EGEM_PROJESILINDIR_TALEP].[TALEP_NO] AS [TALEP_NO], 
+    [EGEM_PROJESILINDIR_TALEP].[CARI_KODU] AS [CARI_KODU], 
+    [EGEM_PROJESILINDIR_TALEP].[CARI_ISIM] AS [CARI_ISIM], 
+    [EGEM_PROJESILINDIR_TALEP].[STOK_KODU] AS [STOK_KODU], 
+    [EGEM_PROJESILINDIR_TALEP].[STOK_ADI] AS [STOK_ADI], 
+    [EGEM_PROJESILINDIR_TALEP].[SIPARIS_TARIHI] AS [SIPARIS_TARIHI], 
+    [EGEM_PROJESILINDIR_TALEP].[MIKTAR] AS [MIKTAR]
+    FROM [dbo].[EGEM_PROJESILINDIR_TALEP] AS [EGEM_PROJESILINDIR_TALEP]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EGEM2023Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EGEM_DEPO_VARDIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TARIH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VARDIYA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DEPO_SORUMLU1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DEPO_SORUMLU2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KIMYASAL_DEPO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FORKLIFT_OPERATOR1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FORKLIFT_OPERATOR2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FORLIFT_DURUM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE_HAMMADDE_BESLEME_VERILEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE_HAMMADDE_BESLEME_SIRADAKI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GELEN_KAMYON_ADET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GELEN_DIGER_URUN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SILINDIR_GIRIS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BEKLEYEN_DAT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BEKLEYEN_MAL_KABUL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TUTANAK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PALET_DURUMU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDARI_ISLEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VARDIYA_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MUREKKEP_BILGI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AKU_SARJ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DEPO_GELIS_SATINALMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GECE_IS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KIMYASAL_DEPO_SORUMLU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_KALITE_VARDIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TARIH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VARDIYA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KALITE_VARDIYA_SORUMLU1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KALITE_VARDIYA_SORUMLU2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_1_MAK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_2_MAK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_3_MAK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_4_MAK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_5_MAK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="K_PROSESS_6_MAK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM1_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM1_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM1_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM1_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM1_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM1_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM2_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM2_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM2_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM2_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM2_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM2_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM3_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM3_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM3_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM3_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM3_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEM3_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KBA_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KBA_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KBA_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KBA_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KBA_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KBA_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="R700_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="R700_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="R700_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="R700_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="R700_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="R700_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B102_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B102_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B102_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B102_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B102_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B102_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B104_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B104_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B104_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B104_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B104_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B104_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106P_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106P_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106P_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106P_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106P_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106P_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106L_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106L_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106L_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106L_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106L_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="B106L_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EXPERTFOIL_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EXPERTFOIL_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EXPERTFOIL_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EXPERTFOIL_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EXPERTFOIL_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EXPERTFOIL_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOILMASTER_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOILMASTER_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOILMASTER_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOILMASTER_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOILMASTER_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOILMASTER_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MILLTEX_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MILLTEX_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MILLTEX_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MILLTEX_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MILLTEX_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MILLTEX_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POLAR_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POLAR_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POLAR_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POLAR_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POLAR_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POLAR_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMEGA_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMEGA_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMEGA_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMEGA_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMEGA_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OMEGA_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PENCERE_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PENCERE_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PENCERE_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PENCERE_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PENCERE_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PENCERE_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ROTOMEC_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ROTOMEC_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ROTOMEC_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ROTOMEC_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ROTOMEC_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ROTOMEC_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TITAN_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TITAN_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TITAN_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TITAN_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TITAN_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TITAN_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="REVOMAC_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="REVOMAC_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="REVOMAC_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="REVOMAC_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="REVOMAC_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="REVOMAC_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NORD_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NORD_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NORD_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NORD_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NORD_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NORD_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ESNEK_AKTAR_ACIK1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ESNEK_AKTAR_ACIK2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ESNEK_AKTAR_ACIK3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ESNEK_AKTAR_ACIK4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ESNEK_AKTAR_BAS_AW" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ESNEK_AKTAR_MAKINE_DENEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BASKI_PROVA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARIZA_DURUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CREASE_TOLERANS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COF_OLCUMU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TEST_YAPILAMAYAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HERHANGI_SEBEP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TESPIT_NOK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ACIK_DOF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HATA_PALET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YURU_ONAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KATLAMA_ARSIV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZ_HAMMADDE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DURDURULAN_ONAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARIZALI_CIHAZ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GELMEYEN_PERSONEL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDARI_SORUN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEMANIC_SAHA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OFFSET_SAHA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ROTOMEC_SAHA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AYIKLAMA_SAHA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LABORATUAR_SAHA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DIGER" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EO_GRAVUR_VARDIYA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VARDIYA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TARIH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ISEMRI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="URETILEN_PALET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DIE_VURUSU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="VARD_CALISAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE_HIZ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RULO_TEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOTOSEL_TEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PRESOR_TEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GOZAYNA_TEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UNITE_TEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ZEMIN_EPOKSI_TEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EMERGENCY_KONTR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EMBOS_UNIT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KESIM_BOLUM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MONOMATIN_KONT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PALETLEME_TEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEMANIC_URETIM_ALANI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARABA_PARCA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE_ARIZA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOBIN_MUREKKEP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SILINDIR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DIGER" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TESLIM_EDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TESLIM_ALAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RULO_TEM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOTOSEL_TEM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PRESOR_TEM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GOZAYNA_TEM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UNITE_TEM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ZEMIN_EPOKSI_TEM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EMERGENCY_KONTR1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EMBOS_UNIT1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KESIM_BOLUM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MONOMATIN_KONT1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PALETLEME_TEM1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LEMANIC_URETIM_ALANI1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARABA_PARCA1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE_ARIZA1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOBIN_MUREKKEP1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SILINDIR1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ISDEGISIM_SAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TOP_FIRE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="URUN_KODU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="EGEM2023Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EGEM_DEPO_VARDIYA" EntityType="Self.EGEM_DEPO_VARDIYA" />
+          <EntitySet Name="EGEM_KALITE_VARDIYA" EntityType="Self.EGEM_KALITE_VARDIYA" />
+          <EntitySet Name="EO_GRAVUR_VARDIYA" EntityType="Self.EO_GRAVUR_VARDIYA" />
+          <EntitySet Name="EGEM_ESNEK_BASKI_KALITE" EntityType="EGEM2023Model.EGEM_ESNEK_BASKI_KALITE" />
+          <EntitySet Name="EGEM_ESNEK_DILIMLEME_KALITE" EntityType="EGEM2023Model.EGEM_ESNEK_DILIMLEME_KALITE" />
+          <EntitySet Name="EGEM_ESNEK_LAMINASYON_KALITE" EntityType="EGEM2023Model.EGEM_ESNEK_LAMINASYON_KALITE" />
+          <EntitySet Name="EGEM_GRAVUR_KALITE" EntityType="EGEM2023Model.EGEM_GRAVUR_KALITE" />
+          <EntitySet Name="EGEM_OFSET_BASKI_KALITE" EntityType="EGEM2023Model.EGEM_OFSET_BASKI_KALITE" />
+          <EntitySet Name="EGEM_OFSET_BITIRME_KALITE" EntityType="EGEM2023Model.EGEM_OFSET_BITIRME_KALITE" />
+          <EntitySet Name="EGEM_ORJINAL_IMAJ" EntityType="EGEM2023Model.EGEM_ORJINAL_IMAJ" />
+          <EntitySet Name="EGEM_DOF_TAKIP" EntityType="EGEM2023Model.EGEM_DOF_TAKIP" />
+          <EntitySet Name="EGEM_DOFLIST" EntityType="EGEM2023Model.EGEM_DOFLIST" />
+          <EntitySet Name="EGEM_PROJESILINDIR_TALEP" EntityType="EGEM2023Model.EGEM_PROJESILINDIR_TALEP" />
+          <EntitySet Name="EGEM_MVC_USER" EntityType="EGEM2023Model.EGEM_MVC_USER" />
+        </EntityContainer>
+        <EntityType Name="EGEM_ESNEK_BASKI_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="URUN_KODU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URUN_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SIPARIS_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZAMAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOBIN_NO" Type="Int32" />
+          <Property Name="HAMMADDE_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOBIN_ENI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOTOSEL_ARALIGI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NET_BASKI_ENI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BASKI_YONU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FILM_TIPI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BARKOD_OKUNUR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ACILIS_YONU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARKA_KAPANMA_SEKLI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ICERIK_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RENK_UYGUN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RENK_UYGUN_GOZ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BASKI_KAYIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GORSEL_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ADEZYON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KURUMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TONLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SAKAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CIZGI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ISIL_YAPISMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MUREKKEP_MIKTAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BIRIM_AGIRLIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COF" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GC_TEST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOBIN_ICBAYRAK_SAYI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KONTROL_ONAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SILINDIR_KOD_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GLOSS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NOK_GORSEL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GORSEL_ADRES" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CITILEME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_ESNEK_DILIMLEME_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="URUN_KODU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URUN_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SIPARIS_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZAMAN" Type="DateTime" Precision="0" />
+          <Property Name="BOBIN_NO" Type="Int32" />
+          <Property Name="DILME_ENI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOTOSEL_ARALIGI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ACILIS_YONU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IC_CAP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EK_SAYI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOBIN_CAP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GORSEL_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KESIM_KAYIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TONLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SAKAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CIZGI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RENK_UYGUN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SARIM_DUZGUN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOBIN_EKI_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BOBIN_BARKOD_OKUT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BARKOD_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KALITE_ONAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_ESNEK_LAMINASYON_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="URUN_KODU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URUN_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SIPARIS_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ZAMAN" Type="DateTime" Precision="0" />
+          <Property Name="BOBIN_NO" Type="Int32" />
+          <Property Name="BOBIN_ENI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOTOSEL_ARALIGI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AL_FOLYO_YONU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TUTKAL_GRAMAJ" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BIRIM_AGIRLIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YAPISMA_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GORSEL_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BENCIK_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ISIL_YAPISMA_KONT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LAMINASYON_KUVVETI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COF_TEST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KALITE_ONAY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_GRAVUR_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="urun_kodu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="urun_adi" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="sipno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="saat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="palet_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hammadde_kontrol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hammadde_fiziki" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="silindir_kod_kontrol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="baski_icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="baski_register" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="onay_num_renk_gorsel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="onay_num_renk_spectro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="yelpaze_renk_kont" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="barkod_okut" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="isil_yapis_kont" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="parlaklik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cof_test_dinamik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cof_test_statik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="asinma_test" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="baski_hata" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="silindir_vuruk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lak_kuruma" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bicak_film" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="kesim_gorsel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="kesim_ebat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="tabaka_hasar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="montaj_pilyaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="kirim_direnc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="kutu_yapisma" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emdeb_gorsel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emdeb_register" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="emdeb_kontrol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="kulakcik_katlan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="palet_etiket" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="kontrol_onay" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="bobin_patlak" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MAKINE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="yedek" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="zaman" Type="DateTime" Precision="0" />
+          <Property Name="bundle_yuksek" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hammadde_oba" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="palet_yerlesim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="palet_gorsel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hammadde_gorsel_kontrol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="makine_temiz_renk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="kirpinti_kontrol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_OFSET_BASKI_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SIPARISNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STOK_KODU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PROSES" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SAAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CALISILAN_MKN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URUN_ADI_KNT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PALET_NO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HAMMADDE_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GRAMAJ_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EBAT_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CAPRAZ_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YELPAZE_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YAPISMA_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SU_YOLU_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MUREKKEP_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ARTWORK_UYGUNLUK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BICAK_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POZA_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TONLAMA_SAKAL_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GORSEL_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LAK_BOS_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LAK_AL_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PARLAKLIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ASINMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COF_KINETIK_TEST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COF_STATIK_TEST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ISIL_YAPISMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RENK_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BARKOD_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ASETAT_KONTROL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KORONA_YONU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SILIKONLU_BANT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KONTROL_EDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_OFSET_BITIRME_KALITE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SIPARISNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STOK_KODU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PROSES" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="TARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SAAT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CALISILAN_MKN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="URUN_ADI_KNT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PALET_NO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HAMMADDE_KONTROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SU_YOLU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ARTWORK_UYGUNLUK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BICAK_FILM_KONTROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GORSEL_KONTROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BARKOD_KONTROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PILYAJ_KONTROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KASIM_PATLATMA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KIRIM_DIRENCI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NIK_YERLERI_KONTROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMBOSS_DEBOSS_KONTROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMBOSS_DEBOSS_REGISTER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMBOSS_DEBOSS_KONTROL2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TUM_PZS_KONT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TS_UYGUNLUK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PALET_GENEL_KONT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KONTROL_EDEN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BUNDLE_YUKSEK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_ORJINAL_IMAJ">
+          <Key>
+            <PropertyRef Name="STOK_KODU" />
+          </Key>
+          <Property Name="STOK_KODU" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="orjinal_imaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_DOF_TAKIP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KAYIT_YAPAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TARIH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZLUK_FAALIYET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZLUK_SUREC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZLUK_TANIMI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MUSTERI_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="STOK_KODU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SIPARIS_NO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BIRIM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OPERATOR_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MALZEME_KODU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MALZEME_ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HATALI_URUN_MIKTARI" Type="Int32" />
+          <Property Name="UYGUNSUZ_MAKINA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZ_GRUP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZ_KOK_NEDEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZ_KOK_NEDEN_ACIK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DUZELTME_FAALIYET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DUZELTME_FAALIYET_TARIH" Type="DateTime" Precision="3" />
+          <Property Name="DUZELTME_ISLEM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ONLEYICI_FAALIYET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ONLEYICI_FAALIYET_TARIH" Type="DateTime" Precision="3" />
+          <Property Name="YAPILACAKLAR_ACIKLAMA_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YAPILACAKLAR_SORUMLU_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YAPILACAKLAR_TARIH_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YAPILACAKLAR_ACIKLAMA_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YAPILACAKLAR_SORUMLU_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YAPILACAKLAR_TARIH_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAKIP_SONUCU_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TAKIP_TARIH_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAKIP_SONUCU_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TAKIP_TARIH_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YGG_KARARI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YGG_TARIH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAKIP_SONUCU_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TAKIP_TAIH_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAKIP_SONUCU_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TAKIP_TARIH_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOF_SAHIP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN_AD_SOY" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN_BIRIM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN_UNVAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN_ANALIZ_KONU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN_BAS_TAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN_BIT_TAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KOK_NEDEN4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COZUM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ONERI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DF_KAPATMA_SURE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DOF_DURUM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HATA_BULAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HATALI_MALZEME_MIKTARI" Type="Int32" />
+          <Property Name="HATALI_MALZEME_BIRIM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KREDI_NOTU" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="GECICI_AKSIYON" Type="DateTime" Precision="0" />
+          <Property Name="KALICI_AKSIYON" Type="DateTime" Precision="0" />
+          <Property Name="DURUS_SURE" Type="Int32" />
+          <Property Name="SATINALMA_KARAR" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SATINALMA_TEDARIK_AKSIYON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DOF_BILGI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PACKAGE_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZLUK_TANIMI_SATINALMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TEDARIKCI_AKSIYONU_SATINALMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_1_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_2_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_3_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_4_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_5_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_6" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_6_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_7" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_7_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_8" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_8_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_9" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_9_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_10" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_10_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_11" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_11_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_12" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_12_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_13" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_13_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_14" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_14_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_15" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_15_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_16" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_16_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_17" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_17_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_18" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_18_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_19" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_19_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_20_FILE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_DOFLIST">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TARIH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KAYIT_YAPAN" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZLUK_FAALIYET" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZLUK_SUREC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UYGUNSUZLUK_TANIMI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IMAGE_4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EGEM_PROJESILINDIR_TALEP">
+          <Key>
+            <PropertyRef Name="SIPARIS_NO" />
+            <PropertyRef Name="STOK_KODU" />
+          </Key>
+          <Property Name="SIPARIS_NO" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TALEP_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CARI_KODU" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="CARI_ISIM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_KODU" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="STOK_ADI" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SIPARIS_TARIHI" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MIKTAR" Type="Decimal" Precision="28" Scale="8" />
+        </EntityType>
+        <EntityType Name="EGEM_MVC_USER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AD_SOYAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SIFRE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ROL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EGEM2023ModelStoreContainer" CdmEntityContainer="EGEM2023Entities">
+          <EntitySetMapping Name="EGEM_DEPO_VARDIYA">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_DEPO_VARDIYA">
+              <MappingFragment StoreEntitySet="EGEM_DEPO_VARDIYA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="VARDIYA" ColumnName="VARDIYA" />
+                <ScalarProperty Name="DEPO_SORUMLU1" ColumnName="DEPO_SORUMLU1" />
+                <ScalarProperty Name="DEPO_SORUMLU2" ColumnName="DEPO_SORUMLU2" />
+                <ScalarProperty Name="KIMYASAL_DEPO" ColumnName="KIMYASAL_DEPO" />
+                <ScalarProperty Name="FORKLIFT_OPERATOR1" ColumnName="FORKLIFT_OPERATOR1" />
+                <ScalarProperty Name="FORKLIFT_OPERATOR2" ColumnName="FORKLIFT_OPERATOR2" />
+                <ScalarProperty Name="FORLIFT_DURUM" ColumnName="FORLIFT_DURUM" />
+                <ScalarProperty Name="MAKINE_HAMMADDE_BESLEME_VERILEN" ColumnName="MAKINE_HAMMADDE_BESLEME_VERILEN" />
+                <ScalarProperty Name="MAKINE_HAMMADDE_BESLEME_SIRADAKI" ColumnName="MAKINE_HAMMADDE_BESLEME_SIRADAKI" />
+                <ScalarProperty Name="GELEN_KAMYON_ADET" ColumnName="GELEN_KAMYON_ADET" />
+                <ScalarProperty Name="GELEN_DIGER_URUN" ColumnName="GELEN_DIGER_URUN" />
+                <ScalarProperty Name="SILINDIR_GIRIS" ColumnName="SILINDIR_GIRIS" />
+                <ScalarProperty Name="BEKLEYEN_DAT" ColumnName="BEKLEYEN_DAT" />
+                <ScalarProperty Name="BEKLEYEN_MAL_KABUL" ColumnName="BEKLEYEN_MAL_KABUL" />
+                <ScalarProperty Name="TUTANAK" ColumnName="TUTANAK" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="PALET_DURUMU" ColumnName="PALET_DURUMU" />
+                <ScalarProperty Name="IDARI_ISLEM" ColumnName="IDARI_ISLEM" />
+                <ScalarProperty Name="VARDIYA_KONTROL" ColumnName="VARDIYA_KONTROL" />
+                <ScalarProperty Name="MUREKKEP_BILGI" ColumnName="MUREKKEP_BILGI" />
+                <ScalarProperty Name="AKU_SARJ" ColumnName="AKU_SARJ" />
+                <ScalarProperty Name="DEPO_GELIS_SATINALMA" ColumnName="DEPO_GELIS_SATINALMA" />
+                <ScalarProperty Name="GECE_IS" ColumnName="GECE_IS" />
+                <ScalarProperty Name="KIMYASAL_DEPO_SORUMLU" ColumnName="KIMYASAL_DEPO_SORUMLU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_KALITE_VARDIYA">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_KALITE_VARDIYA">
+              <MappingFragment StoreEntitySet="EGEM_KALITE_VARDIYA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="VARDIYA" ColumnName="VARDIYA" />
+                <ScalarProperty Name="KALITE_VARDIYA_SORUMLU1" ColumnName="KALITE_VARDIYA_SORUMLU1" />
+                <ScalarProperty Name="KALITE_VARDIYA_SORUMLU2" ColumnName="KALITE_VARDIYA_SORUMLU2" />
+                <ScalarProperty Name="K_PROSESS_1" ColumnName="K_PROSESS_1" />
+                <ScalarProperty Name="K_PROSESS_2" ColumnName="K_PROSESS_2" />
+                <ScalarProperty Name="K_PROSESS_3" ColumnName="K_PROSESS_3" />
+                <ScalarProperty Name="K_PROSESS_4" ColumnName="K_PROSESS_4" />
+                <ScalarProperty Name="K_PROSESS_5" ColumnName="K_PROSESS_5" />
+                <ScalarProperty Name="K_PROSESS_6" ColumnName="K_PROSESS_6" />
+                <ScalarProperty Name="K_PROSESS_1_MAK" ColumnName="K_PROSESS_1_MAK" />
+                <ScalarProperty Name="K_PROSESS_2_MAK" ColumnName="K_PROSESS_2_MAK" />
+                <ScalarProperty Name="K_PROSESS_3_MAK" ColumnName="K_PROSESS_3_MAK" />
+                <ScalarProperty Name="K_PROSESS_4_MAK" ColumnName="K_PROSESS_4_MAK" />
+                <ScalarProperty Name="K_PROSESS_5_MAK" ColumnName="K_PROSESS_5_MAK" />
+                <ScalarProperty Name="K_PROSESS_6_MAK" ColumnName="K_PROSESS_6_MAK" />
+                <ScalarProperty Name="LEM1_ACIK1" ColumnName="LEM1_ACIK1" />
+                <ScalarProperty Name="LEM1_ACIK2" ColumnName="LEM1_ACIK2" />
+                <ScalarProperty Name="LEM1_ACIK3" ColumnName="LEM1_ACIK3" />
+                <ScalarProperty Name="LEM1_ACIK4" ColumnName="LEM1_ACIK4" />
+                <ScalarProperty Name="LEM1_BAS_AW" ColumnName="LEM1_BAS_AW" />
+                <ScalarProperty Name="LEM1_MAKINE_DENEME" ColumnName="LEM1_MAKINE_DENEME" />
+                <ScalarProperty Name="LEM2_ACIK1" ColumnName="LEM2_ACIK1" />
+                <ScalarProperty Name="LEM2_ACIK2" ColumnName="LEM2_ACIK2" />
+                <ScalarProperty Name="LEM2_ACIK3" ColumnName="LEM2_ACIK3" />
+                <ScalarProperty Name="LEM2_ACIK4" ColumnName="LEM2_ACIK4" />
+                <ScalarProperty Name="LEM2_BAS_AW" ColumnName="LEM2_BAS_AW" />
+                <ScalarProperty Name="LEM2_MAKINE_DENEME" ColumnName="LEM2_MAKINE_DENEME" />
+                <ScalarProperty Name="LEM3_ACIK1" ColumnName="LEM3_ACIK1" />
+                <ScalarProperty Name="LEM3_ACIK2" ColumnName="LEM3_ACIK2" />
+                <ScalarProperty Name="LEM3_ACIK3" ColumnName="LEM3_ACIK3" />
+                <ScalarProperty Name="LEM3_ACIK4" ColumnName="LEM3_ACIK4" />
+                <ScalarProperty Name="LEM3_BAS_AW" ColumnName="LEM3_BAS_AW" />
+                <ScalarProperty Name="LEM3_MAKINE_DENEME" ColumnName="LEM3_MAKINE_DENEME" />
+                <ScalarProperty Name="KBA_ACIK1" ColumnName="KBA_ACIK1" />
+                <ScalarProperty Name="KBA_ACIK2" ColumnName="KBA_ACIK2" />
+                <ScalarProperty Name="KBA_ACIK3" ColumnName="KBA_ACIK3" />
+                <ScalarProperty Name="KBA_ACIK4" ColumnName="KBA_ACIK4" />
+                <ScalarProperty Name="KBA_BAS_AW" ColumnName="KBA_BAS_AW" />
+                <ScalarProperty Name="KBA_MAKINE_DENEME" ColumnName="KBA_MAKINE_DENEME" />
+                <ScalarProperty Name="R700_ACIK1" ColumnName="R700_ACIK1" />
+                <ScalarProperty Name="R700_ACIK2" ColumnName="R700_ACIK2" />
+                <ScalarProperty Name="R700_ACIK3" ColumnName="R700_ACIK3" />
+                <ScalarProperty Name="R700_ACIK4" ColumnName="R700_ACIK4" />
+                <ScalarProperty Name="R700_BAS_AW" ColumnName="R700_BAS_AW" />
+                <ScalarProperty Name="R700_MAKINE_DENEME" ColumnName="R700_MAKINE_DENEME" />
+                <ScalarProperty Name="B102_ACIK1" ColumnName="B102_ACIK1" />
+                <ScalarProperty Name="B102_ACIK2" ColumnName="B102_ACIK2" />
+                <ScalarProperty Name="B102_ACIK3" ColumnName="B102_ACIK3" />
+                <ScalarProperty Name="B102_ACIK4" ColumnName="B102_ACIK4" />
+                <ScalarProperty Name="B102_BAS_AW" ColumnName="B102_BAS_AW" />
+                <ScalarProperty Name="B102_MAKINE_DENEME" ColumnName="B102_MAKINE_DENEME" />
+                <ScalarProperty Name="B104_ACIK1" ColumnName="B104_ACIK1" />
+                <ScalarProperty Name="B104_ACIK2" ColumnName="B104_ACIK2" />
+                <ScalarProperty Name="B104_ACIK3" ColumnName="B104_ACIK3" />
+                <ScalarProperty Name="B104_ACIK4" ColumnName="B104_ACIK4" />
+                <ScalarProperty Name="B104_BAS_AW" ColumnName="B104_BAS_AW" />
+                <ScalarProperty Name="B104_MAKINE_DENEME" ColumnName="B104_MAKINE_DENEME" />
+                <ScalarProperty Name="B106P_ACIK1" ColumnName="B106P_ACIK1" />
+                <ScalarProperty Name="B106P_ACIK2" ColumnName="B106P_ACIK2" />
+                <ScalarProperty Name="B106P_ACIK3" ColumnName="B106P_ACIK3" />
+                <ScalarProperty Name="B106P_ACIK4" ColumnName="B106P_ACIK4" />
+                <ScalarProperty Name="B106P_BAS_AW" ColumnName="B106P_BAS_AW" />
+                <ScalarProperty Name="B106P_MAKINE_DENEME" ColumnName="B106P_MAKINE_DENEME" />
+                <ScalarProperty Name="B106L_ACIK1" ColumnName="B106L_ACIK1" />
+                <ScalarProperty Name="B106L_ACIK2" ColumnName="B106L_ACIK2" />
+                <ScalarProperty Name="B106L_ACIK3" ColumnName="B106L_ACIK3" />
+                <ScalarProperty Name="B106L_ACIK4" ColumnName="B106L_ACIK4" />
+                <ScalarProperty Name="B106L_BAS_AW" ColumnName="B106L_BAS_AW" />
+                <ScalarProperty Name="B106L_MAKINE_DENEME" ColumnName="B106L_MAKINE_DENEME" />
+                <ScalarProperty Name="EXPERTFOIL_ACIK1" ColumnName="EXPERTFOIL_ACIK1" />
+                <ScalarProperty Name="EXPERTFOIL_ACIK2" ColumnName="EXPERTFOIL_ACIK2" />
+                <ScalarProperty Name="EXPERTFOIL_ACIK3" ColumnName="EXPERTFOIL_ACIK3" />
+                <ScalarProperty Name="EXPERTFOIL_ACIK4" ColumnName="EXPERTFOIL_ACIK4" />
+                <ScalarProperty Name="EXPERTFOIL_BAS_AW" ColumnName="EXPERTFOIL_BAS_AW" />
+                <ScalarProperty Name="EXPERTFOIL_MAKINE_DENEME" ColumnName="EXPERTFOIL_MAKINE_DENEME" />
+                <ScalarProperty Name="FOILMASTER_ACIK1" ColumnName="FOILMASTER_ACIK1" />
+                <ScalarProperty Name="FOILMASTER_ACIK2" ColumnName="FOILMASTER_ACIK2" />
+                <ScalarProperty Name="FOILMASTER_ACIK3" ColumnName="FOILMASTER_ACIK3" />
+                <ScalarProperty Name="FOILMASTER_ACIK4" ColumnName="FOILMASTER_ACIK4" />
+                <ScalarProperty Name="FOILMASTER_BAS_AW" ColumnName="FOILMASTER_BAS_AW" />
+                <ScalarProperty Name="FOILMASTER_MAKINE_DENEME" ColumnName="FOILMASTER_MAKINE_DENEME" />
+                <ScalarProperty Name="MILLTEX_ACIK1" ColumnName="MILLTEX_ACIK1" />
+                <ScalarProperty Name="MILLTEX_ACIK2" ColumnName="MILLTEX_ACIK2" />
+                <ScalarProperty Name="MILLTEX_ACIK3" ColumnName="MILLTEX_ACIK3" />
+                <ScalarProperty Name="MILLTEX_ACIK4" ColumnName="MILLTEX_ACIK4" />
+                <ScalarProperty Name="MILLTEX_BAS_AW" ColumnName="MILLTEX_BAS_AW" />
+                <ScalarProperty Name="MILLTEX_MAKINE_DENEME" ColumnName="MILLTEX_MAKINE_DENEME" />
+                <ScalarProperty Name="POLAR_ACIK1" ColumnName="POLAR_ACIK1" />
+                <ScalarProperty Name="POLAR_ACIK2" ColumnName="POLAR_ACIK2" />
+                <ScalarProperty Name="POLAR_ACIK3" ColumnName="POLAR_ACIK3" />
+                <ScalarProperty Name="POLAR_ACIK4" ColumnName="POLAR_ACIK4" />
+                <ScalarProperty Name="POLAR_BAS_AW" ColumnName="POLAR_BAS_AW" />
+                <ScalarProperty Name="POLAR_MAKINE_DENEME" ColumnName="POLAR_MAKINE_DENEME" />
+                <ScalarProperty Name="OMEGA_ACIK1" ColumnName="OMEGA_ACIK1" />
+                <ScalarProperty Name="OMEGA_ACIK2" ColumnName="OMEGA_ACIK2" />
+                <ScalarProperty Name="OMEGA_ACIK3" ColumnName="OMEGA_ACIK3" />
+                <ScalarProperty Name="OMEGA_ACIK4" ColumnName="OMEGA_ACIK4" />
+                <ScalarProperty Name="OMEGA_BAS_AW" ColumnName="OMEGA_BAS_AW" />
+                <ScalarProperty Name="OMEGA_MAKINE_DENEME" ColumnName="OMEGA_MAKINE_DENEME" />
+                <ScalarProperty Name="PENCERE_ACIK1" ColumnName="PENCERE_ACIK1" />
+                <ScalarProperty Name="PENCERE_ACIK2" ColumnName="PENCERE_ACIK2" />
+                <ScalarProperty Name="PENCERE_ACIK3" ColumnName="PENCERE_ACIK3" />
+                <ScalarProperty Name="PENCERE_ACIK4" ColumnName="PENCERE_ACIK4" />
+                <ScalarProperty Name="PENCERE_BAS_AW" ColumnName="PENCERE_BAS_AW" />
+                <ScalarProperty Name="PENCERE_MAKINE_DENEME" ColumnName="PENCERE_MAKINE_DENEME" />
+                <ScalarProperty Name="ROTOMEC_ACIK1" ColumnName="ROTOMEC_ACIK1" />
+                <ScalarProperty Name="ROTOMEC_ACIK2" ColumnName="ROTOMEC_ACIK2" />
+                <ScalarProperty Name="ROTOMEC_ACIK3" ColumnName="ROTOMEC_ACIK3" />
+                <ScalarProperty Name="ROTOMEC_ACIK4" ColumnName="ROTOMEC_ACIK4" />
+                <ScalarProperty Name="ROTOMEC_BAS_AW" ColumnName="ROTOMEC_BAS_AW" />
+                <ScalarProperty Name="ROTOMEC_MAKINE_DENEME" ColumnName="ROTOMEC_MAKINE_DENEME" />
+                <ScalarProperty Name="TITAN_ACIK1" ColumnName="TITAN_ACIK1" />
+                <ScalarProperty Name="TITAN_ACIK2" ColumnName="TITAN_ACIK2" />
+                <ScalarProperty Name="TITAN_ACIK3" ColumnName="TITAN_ACIK3" />
+                <ScalarProperty Name="TITAN_ACIK4" ColumnName="TITAN_ACIK4" />
+                <ScalarProperty Name="TITAN_BAS_AW" ColumnName="TITAN_BAS_AW" />
+                <ScalarProperty Name="TITAN_MAKINE_DENEME" ColumnName="TITAN_MAKINE_DENEME" />
+                <ScalarProperty Name="REVOMAC_ACIK1" ColumnName="REVOMAC_ACIK1" />
+                <ScalarProperty Name="REVOMAC_ACIK2" ColumnName="REVOMAC_ACIK2" />
+                <ScalarProperty Name="REVOMAC_ACIK3" ColumnName="REVOMAC_ACIK3" />
+                <ScalarProperty Name="REVOMAC_ACIK4" ColumnName="REVOMAC_ACIK4" />
+                <ScalarProperty Name="REVOMAC_BAS_AW" ColumnName="REVOMAC_BAS_AW" />
+                <ScalarProperty Name="REVOMAC_MAKINE_DENEME" ColumnName="REVOMAC_MAKINE_DENEME" />
+                <ScalarProperty Name="NORD_ACIK1" ColumnName="NORD_ACIK1" />
+                <ScalarProperty Name="NORD_ACIK2" ColumnName="NORD_ACIK2" />
+                <ScalarProperty Name="NORD_ACIK3" ColumnName="NORD_ACIK3" />
+                <ScalarProperty Name="NORD_ACIK4" ColumnName="NORD_ACIK4" />
+                <ScalarProperty Name="NORD_BAS_AW" ColumnName="NORD_BAS_AW" />
+                <ScalarProperty Name="NORD_MAKINE_DENEME" ColumnName="NORD_MAKINE_DENEME" />
+                <ScalarProperty Name="ESNEK_AKTAR_ACIK1" ColumnName="ESNEK_AKTAR_ACIK1" />
+                <ScalarProperty Name="ESNEK_AKTAR_ACIK2" ColumnName="ESNEK_AKTAR_ACIK2" />
+                <ScalarProperty Name="ESNEK_AKTAR_ACIK3" ColumnName="ESNEK_AKTAR_ACIK3" />
+                <ScalarProperty Name="ESNEK_AKTAR_ACIK4" ColumnName="ESNEK_AKTAR_ACIK4" />
+                <ScalarProperty Name="ESNEK_AKTAR_BAS_AW" ColumnName="ESNEK_AKTAR_BAS_AW" />
+                <ScalarProperty Name="ESNEK_AKTAR_MAKINE_DENEME" ColumnName="ESNEK_AKTAR_MAKINE_DENEME" />
+                <ScalarProperty Name="BASKI_PROVA" ColumnName="BASKI_PROVA" />
+                <ScalarProperty Name="ARIZA_DURUS" ColumnName="ARIZA_DURUS" />
+                <ScalarProperty Name="CREASE_TOLERANS" ColumnName="CREASE_TOLERANS" />
+                <ScalarProperty Name="COF_OLCUMU" ColumnName="COF_OLCUMU" />
+                <ScalarProperty Name="TEST_YAPILAMAYAN" ColumnName="TEST_YAPILAMAYAN" />
+                <ScalarProperty Name="HERHANGI_SEBEP" ColumnName="HERHANGI_SEBEP" />
+                <ScalarProperty Name="TESPIT_NOK" ColumnName="TESPIT_NOK" />
+                <ScalarProperty Name="ACIK_DOF" ColumnName="ACIK_DOF" />
+                <ScalarProperty Name="HATA_PALET" ColumnName="HATA_PALET" />
+                <ScalarProperty Name="YURU_ONAY" ColumnName="YURU_ONAY" />
+                <ScalarProperty Name="KATLAMA_ARSIV" ColumnName="KATLAMA_ARSIV" />
+                <ScalarProperty Name="UYGUNSUZ_HAMMADDE" ColumnName="UYGUNSUZ_HAMMADDE" />
+                <ScalarProperty Name="DURDURULAN_ONAY" ColumnName="DURDURULAN_ONAY" />
+                <ScalarProperty Name="ARIZALI_CIHAZ" ColumnName="ARIZALI_CIHAZ" />
+                <ScalarProperty Name="GELMEYEN_PERSONEL" ColumnName="GELMEYEN_PERSONEL" />
+                <ScalarProperty Name="IDARI_SORUN" ColumnName="IDARI_SORUN" />
+                <ScalarProperty Name="LEMANIC_SAHA" ColumnName="LEMANIC_SAHA" />
+                <ScalarProperty Name="OFFSET_SAHA" ColumnName="OFFSET_SAHA" />
+                <ScalarProperty Name="ROTOMEC_SAHA" ColumnName="ROTOMEC_SAHA" />
+                <ScalarProperty Name="AYIKLAMA_SAHA" ColumnName="AYIKLAMA_SAHA" />
+                <ScalarProperty Name="LABORATUAR_SAHA" ColumnName="LABORATUAR_SAHA" />
+                <ScalarProperty Name="DIGER" ColumnName="DIGER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EO_GRAVUR_VARDIYA">
+            <EntityTypeMapping TypeName="EGEM2023Model.EO_GRAVUR_VARDIYA">
+              <MappingFragment StoreEntitySet="EO_GRAVUR_VARDIYA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VARDIYA" ColumnName="VARDIYA" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ISEMRI" ColumnName="ISEMRI" />
+                <ScalarProperty Name="URETILEN_PALET" ColumnName="URETILEN_PALET" />
+                <ScalarProperty Name="DIE_VURUSU" ColumnName="DIE_VURUSU" />
+                <ScalarProperty Name="VARD_CALISAN" ColumnName="VARD_CALISAN" />
+                <ScalarProperty Name="MAKINE_HIZ" ColumnName="MAKINE_HIZ" />
+                <ScalarProperty Name="RULO_TEM" ColumnName="RULO_TEM" />
+                <ScalarProperty Name="FOTOSEL_TEM" ColumnName="FOTOSEL_TEM" />
+                <ScalarProperty Name="PRESOR_TEM" ColumnName="PRESOR_TEM" />
+                <ScalarProperty Name="GOZAYNA_TEM" ColumnName="GOZAYNA_TEM" />
+                <ScalarProperty Name="UNITE_TEM" ColumnName="UNITE_TEM" />
+                <ScalarProperty Name="ZEMIN_EPOKSI_TEM" ColumnName="ZEMIN_EPOKSI_TEM" />
+                <ScalarProperty Name="EMERGENCY_KONTR" ColumnName="EMERGENCY_KONTR" />
+                <ScalarProperty Name="EMBOS_UNIT" ColumnName="EMBOS_UNIT" />
+                <ScalarProperty Name="KESIM_BOLUM" ColumnName="KESIM_BOLUM" />
+                <ScalarProperty Name="MONOMATIN_KONT" ColumnName="MONOMATIN_KONT" />
+                <ScalarProperty Name="PALETLEME_TEM" ColumnName="PALETLEME_TEM" />
+                <ScalarProperty Name="LEMANIC_URETIM_ALANI" ColumnName="LEMANIC_URETIM_ALANI" />
+                <ScalarProperty Name="ARABA_PARCA" ColumnName="ARABA_PARCA" />
+                <ScalarProperty Name="MAKINE_ARIZA" ColumnName="MAKINE_ARIZA" />
+                <ScalarProperty Name="BOBIN_MUREKKEP" ColumnName="BOBIN_MUREKKEP" />
+                <ScalarProperty Name="SILINDIR" ColumnName="SILINDIR" />
+                <ScalarProperty Name="DIGER" ColumnName="DIGER" />
+                <ScalarProperty Name="TESLIM_EDEN" ColumnName="TESLIM_EDEN" />
+                <ScalarProperty Name="TESLIM_ALAN" ColumnName="TESLIM_ALAN" />
+                <ScalarProperty Name="RULO_TEM1" ColumnName="RULO_TEM1" />
+                <ScalarProperty Name="FOTOSEL_TEM1" ColumnName="FOTOSEL_TEM1" />
+                <ScalarProperty Name="PRESOR_TEM1" ColumnName="PRESOR_TEM1" />
+                <ScalarProperty Name="GOZAYNA_TEM1" ColumnName="GOZAYNA_TEM1" />
+                <ScalarProperty Name="UNITE_TEM1" ColumnName="UNITE_TEM1" />
+                <ScalarProperty Name="ZEMIN_EPOKSI_TEM1" ColumnName="ZEMIN_EPOKSI_TEM1" />
+                <ScalarProperty Name="EMERGENCY_KONTR1" ColumnName="EMERGENCY_KONTR1" />
+                <ScalarProperty Name="EMBOS_UNIT1" ColumnName="EMBOS_UNIT1" />
+                <ScalarProperty Name="KESIM_BOLUM1" ColumnName="KESIM_BOLUM1" />
+                <ScalarProperty Name="MONOMATIN_KONT1" ColumnName="MONOMATIN_KONT1" />
+                <ScalarProperty Name="PALETLEME_TEM1" ColumnName="PALETLEME_TEM1" />
+                <ScalarProperty Name="LEMANIC_URETIM_ALANI1" ColumnName="LEMANIC_URETIM_ALANI1" />
+                <ScalarProperty Name="ARABA_PARCA1" ColumnName="ARABA_PARCA1" />
+                <ScalarProperty Name="MAKINE_ARIZA1" ColumnName="MAKINE_ARIZA1" />
+                <ScalarProperty Name="BOBIN_MUREKKEP1" ColumnName="BOBIN_MUREKKEP1" />
+                <ScalarProperty Name="SILINDIR1" ColumnName="SILINDIR1" />
+                <ScalarProperty Name="ISDEGISIM_SAY" ColumnName="ISDEGISIM_SAY" />
+                <ScalarProperty Name="TOP_FIRE" ColumnName="TOP_FIRE" />
+                <ScalarProperty Name="URUN_KODU" ColumnName="URUN_KODU" />
+                <ScalarProperty Name="MAKINE" ColumnName="MAKINE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_ESNEK_BASKI_KALITE">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_ESNEK_BASKI_KALITE">
+              <MappingFragment StoreEntitySet="EGEM_ESNEK_BASKI_KALITE">
+                <ScalarProperty Name="CITILEME" ColumnName="CITILEME" />
+                <ScalarProperty Name="GORSEL_ADRES" ColumnName="GORSEL_ADRES" />
+                <ScalarProperty Name="NOK_GORSEL" ColumnName="NOK_GORSEL" />
+                <ScalarProperty Name="GLOSS" ColumnName="GLOSS" />
+                <ScalarProperty Name="SILINDIR_KOD_KONTROL" ColumnName="SILINDIR_KOD_KONTROL" />
+                <ScalarProperty Name="KONTROL_ONAY" ColumnName="KONTROL_ONAY" />
+                <ScalarProperty Name="MAKINE" ColumnName="MAKINE" />
+                <ScalarProperty Name="BOBIN_ICBAYRAK_SAYI" ColumnName="BOBIN_ICBAYRAK_SAYI" />
+                <ScalarProperty Name="GC_TEST" ColumnName="GC_TEST" />
+                <ScalarProperty Name="COF" ColumnName="COF" />
+                <ScalarProperty Name="BIRIM_AGIRLIK" ColumnName="BIRIM_AGIRLIK" />
+                <ScalarProperty Name="MUREKKEP_MIKTAR" ColumnName="MUREKKEP_MIKTAR" />
+                <ScalarProperty Name="ISIL_YAPISMA" ColumnName="ISIL_YAPISMA" />
+                <ScalarProperty Name="CIZGI" ColumnName="CIZGI" />
+                <ScalarProperty Name="SAKAL" ColumnName="SAKAL" />
+                <ScalarProperty Name="TONLAMA" ColumnName="TONLAMA" />
+                <ScalarProperty Name="KURUMA" ColumnName="KURUMA" />
+                <ScalarProperty Name="ADEZYON" ColumnName="ADEZYON" />
+                <ScalarProperty Name="GORSEL_KONTROL" ColumnName="GORSEL_KONTROL" />
+                <ScalarProperty Name="BASKI_KAYIK" ColumnName="BASKI_KAYIK" />
+                <ScalarProperty Name="RENK_UYGUN_GOZ" ColumnName="RENK_UYGUN_GOZ" />
+                <ScalarProperty Name="RENK_UYGUN" ColumnName="RENK_UYGUN" />
+                <ScalarProperty Name="ICERIK_KONTROL" ColumnName="ICERIK_KONTROL" />
+                <ScalarProperty Name="ARKA_KAPANMA_SEKLI" ColumnName="ARKA_KAPANMA_SEKLI" />
+                <ScalarProperty Name="ACILIS_YONU" ColumnName="ACILIS_YONU" />
+                <ScalarProperty Name="BARKOD_OKUNUR" ColumnName="BARKOD_OKUNUR" />
+                <ScalarProperty Name="FILM_TIPI" ColumnName="FILM_TIPI" />
+                <ScalarProperty Name="BASKI_YONU" ColumnName="BASKI_YONU" />
+                <ScalarProperty Name="NET_BASKI_ENI" ColumnName="NET_BASKI_ENI" />
+                <ScalarProperty Name="FOTOSEL_ARALIGI" ColumnName="FOTOSEL_ARALIGI" />
+                <ScalarProperty Name="BOBIN_ENI" ColumnName="BOBIN_ENI" />
+                <ScalarProperty Name="HAMMADDE_KONTROL" ColumnName="HAMMADDE_KONTROL" />
+                <ScalarProperty Name="BOBIN_NO" ColumnName="BOBIN_NO" />
+                <ScalarProperty Name="ZAMAN" ColumnName="ZAMAN" />
+                <ScalarProperty Name="SIPARIS_NO" ColumnName="SIPARIS_NO" />
+                <ScalarProperty Name="URUN_ADI" ColumnName="URUN_ADI" />
+                <ScalarProperty Name="URUN_KODU" ColumnName="URUN_KODU" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_ESNEK_DILIMLEME_KALITE">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_ESNEK_DILIMLEME_KALITE">
+              <MappingFragment StoreEntitySet="EGEM_ESNEK_DILIMLEME_KALITE">
+                <ScalarProperty Name="MAKINE" ColumnName="MAKINE" />
+                <ScalarProperty Name="KALITE_ONAY" ColumnName="KALITE_ONAY" />
+                <ScalarProperty Name="BARKOD_KONTROL" ColumnName="BARKOD_KONTROL" />
+                <ScalarProperty Name="BOBIN_BARKOD_OKUT" ColumnName="BOBIN_BARKOD_OKUT" />
+                <ScalarProperty Name="BOBIN_EKI_KONTROL" ColumnName="BOBIN_EKI_KONTROL" />
+                <ScalarProperty Name="SARIM_DUZGUN" ColumnName="SARIM_DUZGUN" />
+                <ScalarProperty Name="RENK_UYGUN" ColumnName="RENK_UYGUN" />
+                <ScalarProperty Name="CIZGI" ColumnName="CIZGI" />
+                <ScalarProperty Name="SAKAL" ColumnName="SAKAL" />
+                <ScalarProperty Name="TONLAMA" ColumnName="TONLAMA" />
+                <ScalarProperty Name="KESIM_KAYIK" ColumnName="KESIM_KAYIK" />
+                <ScalarProperty Name="GORSEL_KONTROL" ColumnName="GORSEL_KONTROL" />
+                <ScalarProperty Name="BOBIN_CAP" ColumnName="BOBIN_CAP" />
+                <ScalarProperty Name="EK_SAYI" ColumnName="EK_SAYI" />
+                <ScalarProperty Name="IC_CAP" ColumnName="IC_CAP" />
+                <ScalarProperty Name="ACILIS_YONU" ColumnName="ACILIS_YONU" />
+                <ScalarProperty Name="FOTOSEL_ARALIGI" ColumnName="FOTOSEL_ARALIGI" />
+                <ScalarProperty Name="DILME_ENI" ColumnName="DILME_ENI" />
+                <ScalarProperty Name="BOBIN_NO" ColumnName="BOBIN_NO" />
+                <ScalarProperty Name="ZAMAN" ColumnName="ZAMAN" />
+                <ScalarProperty Name="SIPARIS_NO" ColumnName="SIPARIS_NO" />
+                <ScalarProperty Name="URUN_ADI" ColumnName="URUN_ADI" />
+                <ScalarProperty Name="URUN_KODU" ColumnName="URUN_KODU" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_ESNEK_LAMINASYON_KALITE">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_ESNEK_LAMINASYON_KALITE">
+              <MappingFragment StoreEntitySet="EGEM_ESNEK_LAMINASYON_KALITE">
+                <ScalarProperty Name="KALITE_ONAY" ColumnName="KALITE_ONAY" />
+                <ScalarProperty Name="COF_TEST" ColumnName="COF_TEST" />
+                <ScalarProperty Name="LAMINASYON_KUVVETI" ColumnName="LAMINASYON_KUVVETI" />
+                <ScalarProperty Name="ISIL_YAPISMA_KONT" ColumnName="ISIL_YAPISMA_KONT" />
+                <ScalarProperty Name="BENCIK_KONTROL" ColumnName="BENCIK_KONTROL" />
+                <ScalarProperty Name="GORSEL_KONTROL" ColumnName="GORSEL_KONTROL" />
+                <ScalarProperty Name="YAPISMA_KONTROL" ColumnName="YAPISMA_KONTROL" />
+                <ScalarProperty Name="BIRIM_AGIRLIK" ColumnName="BIRIM_AGIRLIK" />
+                <ScalarProperty Name="TUTKAL_GRAMAJ" ColumnName="TUTKAL_GRAMAJ" />
+                <ScalarProperty Name="AL_FOLYO_YONU" ColumnName="AL_FOLYO_YONU" />
+                <ScalarProperty Name="FOTOSEL_ARALIGI" ColumnName="FOTOSEL_ARALIGI" />
+                <ScalarProperty Name="BOBIN_ENI" ColumnName="BOBIN_ENI" />
+                <ScalarProperty Name="BOBIN_NO" ColumnName="BOBIN_NO" />
+                <ScalarProperty Name="ZAMAN" ColumnName="ZAMAN" />
+                <ScalarProperty Name="MAKINE" ColumnName="MAKINE" />
+                <ScalarProperty Name="SIPARIS_NO" ColumnName="SIPARIS_NO" />
+                <ScalarProperty Name="URUN_ADI" ColumnName="URUN_ADI" />
+                <ScalarProperty Name="URUN_KODU" ColumnName="URUN_KODU" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_GRAVUR_KALITE">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_GRAVUR_KALITE">
+              <MappingFragment StoreEntitySet="EGEM_GRAVUR_KALITE">
+                <ScalarProperty Name="kirpinti_kontrol" ColumnName="kirpinti_kontrol" />
+                <ScalarProperty Name="makine_temiz_renk" ColumnName="makine_temiz_renk" />
+                <ScalarProperty Name="hammadde_gorsel_kontrol" ColumnName="hammadde_gorsel_kontrol" />
+                <ScalarProperty Name="palet_gorsel" ColumnName="palet_gorsel" />
+                <ScalarProperty Name="palet_yerlesim" ColumnName="palet_yerlesim" />
+                <ScalarProperty Name="hammadde_oba" ColumnName="hammadde_oba" />
+                <ScalarProperty Name="bundle_yuksek" ColumnName="bundle_yuksek" />
+                <ScalarProperty Name="zaman" ColumnName="zaman" />
+                <ScalarProperty Name="yedek" ColumnName="yedek" />
+                <ScalarProperty Name="MAKINE" ColumnName="MAKINE" />
+                <ScalarProperty Name="bobin_patlak" ColumnName="bobin_patlak" />
+                <ScalarProperty Name="kontrol_onay" ColumnName="kontrol_onay" />
+                <ScalarProperty Name="palet_etiket" ColumnName="palet_etiket" />
+                <ScalarProperty Name="kulakcik_katlan" ColumnName="kulakcik_katlan" />
+                <ScalarProperty Name="emdeb_kontrol" ColumnName="emdeb_kontrol" />
+                <ScalarProperty Name="emdeb_register" ColumnName="emdeb_register" />
+                <ScalarProperty Name="emdeb_gorsel" ColumnName="emdeb_gorsel" />
+                <ScalarProperty Name="kutu_yapisma" ColumnName="kutu_yapisma" />
+                <ScalarProperty Name="kirim_direnc" ColumnName="kirim_direnc" />
+                <ScalarProperty Name="montaj_pilyaj" ColumnName="montaj_pilyaj" />
+                <ScalarProperty Name="tabaka_hasar" ColumnName="tabaka_hasar" />
+                <ScalarProperty Name="kesim_ebat" ColumnName="kesim_ebat" />
+                <ScalarProperty Name="kesim_gorsel" ColumnName="kesim_gorsel" />
+                <ScalarProperty Name="bicak_film" ColumnName="bicak_film" />
+                <ScalarProperty Name="lak_kuruma" ColumnName="lak_kuruma" />
+                <ScalarProperty Name="silindir_vuruk" ColumnName="silindir_vuruk" />
+                <ScalarProperty Name="baski_hata" ColumnName="baski_hata" />
+                <ScalarProperty Name="asinma_test" ColumnName="asinma_test" />
+                <ScalarProperty Name="cof_test_statik" ColumnName="cof_test_statik" />
+                <ScalarProperty Name="cof_test_dinamik" ColumnName="cof_test_dinamik" />
+                <ScalarProperty Name="parlaklik" ColumnName="parlaklik" />
+                <ScalarProperty Name="isil_yapis_kont" ColumnName="isil_yapis_kont" />
+                <ScalarProperty Name="barkod_okut" ColumnName="barkod_okut" />
+                <ScalarProperty Name="yelpaze_renk_kont" ColumnName="yelpaze_renk_kont" />
+                <ScalarProperty Name="onay_num_renk_spectro" ColumnName="onay_num_renk_spectro" />
+                <ScalarProperty Name="onay_num_renk_gorsel" ColumnName="onay_num_renk_gorsel" />
+                <ScalarProperty Name="baski_register" ColumnName="baski_register" />
+                <ScalarProperty Name="baski_icerik" ColumnName="baski_icerik" />
+                <ScalarProperty Name="silindir_kod_kontrol" ColumnName="silindir_kod_kontrol" />
+                <ScalarProperty Name="hammadde_fiziki" ColumnName="hammadde_fiziki" />
+                <ScalarProperty Name="hammadde_kontrol" ColumnName="hammadde_kontrol" />
+                <ScalarProperty Name="palet_no" ColumnName="palet_no" />
+                <ScalarProperty Name="saat" ColumnName="saat" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+                <ScalarProperty Name="sipno" ColumnName="sipno" />
+                <ScalarProperty Name="urun_adi" ColumnName="urun_adi" />
+                <ScalarProperty Name="urun_kodu" ColumnName="urun_kodu" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_OFSET_BASKI_KALITE">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_OFSET_BASKI_KALITE">
+              <MappingFragment StoreEntitySet="EGEM_OFSET_BASKI_KALITE">
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="KONTROL_EDEN" ColumnName="KONTROL_EDEN" />
+                <ScalarProperty Name="SILIKONLU_BANT" ColumnName="SILIKONLU_BANT" />
+                <ScalarProperty Name="KORONA_YONU" ColumnName="KORONA_YONU" />
+                <ScalarProperty Name="ASETAT_KONTROL" ColumnName="ASETAT_KONTROL" />
+                <ScalarProperty Name="BARKOD_KONTROL" ColumnName="BARKOD_KONTROL" />
+                <ScalarProperty Name="RENK_KONTROL" ColumnName="RENK_KONTROL" />
+                <ScalarProperty Name="ISIL_YAPISMA" ColumnName="ISIL_YAPISMA" />
+                <ScalarProperty Name="COF_STATIK_TEST" ColumnName="COF_STATIK_TEST" />
+                <ScalarProperty Name="COF_KINETIK_TEST" ColumnName="COF_KINETIK_TEST" />
+                <ScalarProperty Name="ASINMA" ColumnName="ASINMA" />
+                <ScalarProperty Name="PARLAKLIK" ColumnName="PARLAKLIK" />
+                <ScalarProperty Name="LAK_AL_KONTROL" ColumnName="LAK_AL_KONTROL" />
+                <ScalarProperty Name="LAK_BOS_KONTROL" ColumnName="LAK_BOS_KONTROL" />
+                <ScalarProperty Name="GORSEL_KONTROL" ColumnName="GORSEL_KONTROL" />
+                <ScalarProperty Name="TONLAMA_SAKAL_KONTROL" ColumnName="TONLAMA_SAKAL_KONTROL" />
+                <ScalarProperty Name="POZA_KONTROL" ColumnName="POZA_KONTROL" />
+                <ScalarProperty Name="BICAK_KONTROL" ColumnName="BICAK_KONTROL" />
+                <ScalarProperty Name="ARTWORK_UYGUNLUK" ColumnName="ARTWORK_UYGUNLUK" />
+                <ScalarProperty Name="MUREKKEP_KONTROL" ColumnName="MUREKKEP_KONTROL" />
+                <ScalarProperty Name="SU_YOLU_KONTROL" ColumnName="SU_YOLU_KONTROL" />
+                <ScalarProperty Name="YAPISMA_KONTROL" ColumnName="YAPISMA_KONTROL" />
+                <ScalarProperty Name="YELPAZE_KONTROL" ColumnName="YELPAZE_KONTROL" />
+                <ScalarProperty Name="CAPRAZ_KONTROL" ColumnName="CAPRAZ_KONTROL" />
+                <ScalarProperty Name="EBAT_KONTROL" ColumnName="EBAT_KONTROL" />
+                <ScalarProperty Name="GRAMAJ_KONTROL" ColumnName="GRAMAJ_KONTROL" />
+                <ScalarProperty Name="HAMMADDE_KONTROL" ColumnName="HAMMADDE_KONTROL" />
+                <ScalarProperty Name="PALET_NO" ColumnName="PALET_NO" />
+                <ScalarProperty Name="URUN_ADI_KNT" ColumnName="URUN_ADI_KNT" />
+                <ScalarProperty Name="CALISILAN_MKN" ColumnName="CALISILAN_MKN" />
+                <ScalarProperty Name="SAAT" ColumnName="SAAT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="PROSES" ColumnName="PROSES" />
+                <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+                <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_OFSET_BITIRME_KALITE">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_OFSET_BITIRME_KALITE">
+              <MappingFragment StoreEntitySet="EGEM_OFSET_BITIRME_KALITE">
+                <ScalarProperty Name="BUNDLE_YUKSEK" ColumnName="BUNDLE_YUKSEK" />
+                <ScalarProperty Name="KONTROL_EDEN" ColumnName="KONTROL_EDEN" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="PALET_GENEL_KONT" ColumnName="PALET_GENEL_KONT" />
+                <ScalarProperty Name="TS_UYGUNLUK" ColumnName="TS_UYGUNLUK" />
+                <ScalarProperty Name="TUM_PZS_KONT" ColumnName="TUM_PZS_KONT" />
+                <ScalarProperty Name="EMBOSS_DEBOSS_KONTROL2" ColumnName="EMBOSS_DEBOSS_KONTROL2" />
+                <ScalarProperty Name="EMBOSS_DEBOSS_REGISTER" ColumnName="EMBOSS_DEBOSS_REGISTER" />
+                <ScalarProperty Name="EMBOSS_DEBOSS_KONTROL" ColumnName="EMBOSS_DEBOSS_KONTROL" />
+                <ScalarProperty Name="NIK_YERLERI_KONTROL" ColumnName="NIK_YERLERI_KONTROL" />
+                <ScalarProperty Name="KIRIM_DIRENCI" ColumnName="KIRIM_DIRENCI" />
+                <ScalarProperty Name="KASIM_PATLATMA" ColumnName="KASIM_PATLATMA" />
+                <ScalarProperty Name="PILYAJ_KONTROL" ColumnName="PILYAJ_KONTROL" />
+                <ScalarProperty Name="BARKOD_KONTROL" ColumnName="BARKOD_KONTROL" />
+                <ScalarProperty Name="GORSEL_KONTROL" ColumnName="GORSEL_KONTROL" />
+                <ScalarProperty Name="BICAK_FILM_KONTROL" ColumnName="BICAK_FILM_KONTROL" />
+                <ScalarProperty Name="ARTWORK_UYGUNLUK" ColumnName="ARTWORK_UYGUNLUK" />
+                <ScalarProperty Name="SU_YOLU" ColumnName="SU_YOLU" />
+                <ScalarProperty Name="HAMMADDE_KONTROL" ColumnName="HAMMADDE_KONTROL" />
+                <ScalarProperty Name="PALET_NO" ColumnName="PALET_NO" />
+                <ScalarProperty Name="URUN_ADI_KNT" ColumnName="URUN_ADI_KNT" />
+                <ScalarProperty Name="CALISILAN_MKN" ColumnName="CALISILAN_MKN" />
+                <ScalarProperty Name="SAAT" ColumnName="SAAT" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="PROSES" ColumnName="PROSES" />
+                <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+                <ScalarProperty Name="SIPARISNO" ColumnName="SIPARISNO" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_ORJINAL_IMAJ">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_ORJINAL_IMAJ">
+              <MappingFragment StoreEntitySet="EGEM_ORJINAL_IMAJ">
+                <ScalarProperty Name="orjinal_imaj" ColumnName="orjinal_imaj" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_DOF_TAKIP">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_DOF_TAKIP">
+              <MappingFragment StoreEntitySet="EGEM_DOF_TAKIP">
+                <ScalarProperty Name="IMAGE_20_FILE" ColumnName="IMAGE_20_FILE" />
+                <ScalarProperty Name="IMAGE_20" ColumnName="IMAGE_20" />
+                <ScalarProperty Name="IMAGE_19_FILE" ColumnName="IMAGE_19_FILE" />
+                <ScalarProperty Name="IMAGE_19" ColumnName="IMAGE_19" />
+                <ScalarProperty Name="IMAGE_18_FILE" ColumnName="IMAGE_18_FILE" />
+                <ScalarProperty Name="IMAGE_18" ColumnName="IMAGE_18" />
+                <ScalarProperty Name="IMAGE_17_FILE" ColumnName="IMAGE_17_FILE" />
+                <ScalarProperty Name="IMAGE_17" ColumnName="IMAGE_17" />
+                <ScalarProperty Name="IMAGE_16_FILE" ColumnName="IMAGE_16_FILE" />
+                <ScalarProperty Name="IMAGE_16" ColumnName="IMAGE_16" />
+                <ScalarProperty Name="IMAGE_15_FILE" ColumnName="IMAGE_15_FILE" />
+                <ScalarProperty Name="IMAGE_15" ColumnName="IMAGE_15" />
+                <ScalarProperty Name="IMAGE_14_FILE" ColumnName="IMAGE_14_FILE" />
+                <ScalarProperty Name="IMAGE_14" ColumnName="IMAGE_14" />
+                <ScalarProperty Name="IMAGE_13_FILE" ColumnName="IMAGE_13_FILE" />
+                <ScalarProperty Name="IMAGE_13" ColumnName="IMAGE_13" />
+                <ScalarProperty Name="IMAGE_12_FILE" ColumnName="IMAGE_12_FILE" />
+                <ScalarProperty Name="IMAGE_12" ColumnName="IMAGE_12" />
+                <ScalarProperty Name="IMAGE_11_FILE" ColumnName="IMAGE_11_FILE" />
+                <ScalarProperty Name="IMAGE_11" ColumnName="IMAGE_11" />
+                <ScalarProperty Name="IMAGE_10_FILE" ColumnName="IMAGE_10_FILE" />
+                <ScalarProperty Name="IMAGE_10" ColumnName="IMAGE_10" />
+                <ScalarProperty Name="IMAGE_9_FILE" ColumnName="IMAGE_9_FILE" />
+                <ScalarProperty Name="IMAGE_9" ColumnName="IMAGE_9" />
+                <ScalarProperty Name="IMAGE_8_FILE" ColumnName="IMAGE_8_FILE" />
+                <ScalarProperty Name="IMAGE_8" ColumnName="IMAGE_8" />
+                <ScalarProperty Name="IMAGE_7_FILE" ColumnName="IMAGE_7_FILE" />
+                <ScalarProperty Name="IMAGE_7" ColumnName="IMAGE_7" />
+                <ScalarProperty Name="IMAGE_6_FILE" ColumnName="IMAGE_6_FILE" />
+                <ScalarProperty Name="IMAGE_6" ColumnName="IMAGE_6" />
+                <ScalarProperty Name="IMAGE_5_FILE" ColumnName="IMAGE_5_FILE" />
+                <ScalarProperty Name="IMAGE_5" ColumnName="IMAGE_5" />
+                <ScalarProperty Name="IMAGE_4_FILE" ColumnName="IMAGE_4_FILE" />
+                <ScalarProperty Name="IMAGE_4" ColumnName="IMAGE_4" />
+                <ScalarProperty Name="IMAGE_3_FILE" ColumnName="IMAGE_3_FILE" />
+                <ScalarProperty Name="IMAGE_3" ColumnName="IMAGE_3" />
+                <ScalarProperty Name="IMAGE_2_FILE" ColumnName="IMAGE_2_FILE" />
+                <ScalarProperty Name="IMAGE_2" ColumnName="IMAGE_2" />
+                <ScalarProperty Name="IMAGE_1_FILE" ColumnName="IMAGE_1_FILE" />
+                <ScalarProperty Name="IMAGE_1" ColumnName="IMAGE_1" />
+                <ScalarProperty Name="TEDARIKCI_AKSIYONU_SATINALMA" ColumnName="TEDARIKCI_AKSIYONU_SATINALMA" />
+                <ScalarProperty Name="UYGUNSUZLUK_TANIMI_SATINALMA" ColumnName="UYGUNSUZLUK_TANIMI_SATINALMA" />
+                <ScalarProperty Name="PACKAGE_ID" ColumnName="PACKAGE_ID" />
+                <ScalarProperty Name="DOF_BILGI" ColumnName="DOF_BILGI" />
+                <ScalarProperty Name="SATINALMA_TEDARIK_AKSIYON" ColumnName="SATINALMA_TEDARIK_AKSIYON" />
+                <ScalarProperty Name="SATINALMA_KARAR" ColumnName="SATINALMA_KARAR" />
+                <ScalarProperty Name="DURUS_SURE" ColumnName="DURUS_SURE" />
+                <ScalarProperty Name="KALICI_AKSIYON" ColumnName="KALICI_AKSIYON" />
+                <ScalarProperty Name="GECICI_AKSIYON" ColumnName="GECICI_AKSIYON" />
+                <ScalarProperty Name="KREDI_NOTU" ColumnName="KREDI_NOTU" />
+                <ScalarProperty Name="HATALI_MALZEME_BIRIM" ColumnName="HATALI_MALZEME_BIRIM" />
+                <ScalarProperty Name="HATALI_MALZEME_MIKTARI" ColumnName="HATALI_MALZEME_MIKTARI" />
+                <ScalarProperty Name="HATA_BULAN" ColumnName="HATA_BULAN" />
+                <ScalarProperty Name="DOF_DURUM" ColumnName="DOF_DURUM" />
+                <ScalarProperty Name="DF_KAPATMA_SURE" ColumnName="DF_KAPATMA_SURE" />
+                <ScalarProperty Name="ONERI" ColumnName="ONERI" />
+                <ScalarProperty Name="COZUM" ColumnName="COZUM" />
+                <ScalarProperty Name="KOK_NEDEN4" ColumnName="KOK_NEDEN4" />
+                <ScalarProperty Name="KOK_NEDEN3" ColumnName="KOK_NEDEN3" />
+                <ScalarProperty Name="KOK_NEDEN2" ColumnName="KOK_NEDEN2" />
+                <ScalarProperty Name="KOK_NEDEN1" ColumnName="KOK_NEDEN1" />
+                <ScalarProperty Name="KOK_NEDEN_BIT_TAR" ColumnName="KOK_NEDEN_BIT_TAR" />
+                <ScalarProperty Name="KOK_NEDEN_BAS_TAR" ColumnName="KOK_NEDEN_BAS_TAR" />
+                <ScalarProperty Name="KOK_NEDEN_ANALIZ_KONU" ColumnName="KOK_NEDEN_ANALIZ_KONU" />
+                <ScalarProperty Name="KOK_NEDEN_UNVAN" ColumnName="KOK_NEDEN_UNVAN" />
+                <ScalarProperty Name="KOK_NEDEN_BIRIM" ColumnName="KOK_NEDEN_BIRIM" />
+                <ScalarProperty Name="KOK_NEDEN_AD_SOY" ColumnName="KOK_NEDEN_AD_SOY" />
+                <ScalarProperty Name="DOF_SAHIP" ColumnName="DOF_SAHIP" />
+                <ScalarProperty Name="TAKIP_TARIH_4" ColumnName="TAKIP_TARIH_4" />
+                <ScalarProperty Name="TAKIP_SONUCU_4" ColumnName="TAKIP_SONUCU_4" />
+                <ScalarProperty Name="TAKIP_TAIH_3" ColumnName="TAKIP_TAIH_3" />
+                <ScalarProperty Name="TAKIP_SONUCU_3" ColumnName="TAKIP_SONUCU_3" />
+                <ScalarProperty Name="YGG_TARIH" ColumnName="YGG_TARIH" />
+                <ScalarProperty Name="YGG_KARARI" ColumnName="YGG_KARARI" />
+                <ScalarProperty Name="TAKIP_TARIH_2" ColumnName="TAKIP_TARIH_2" />
+                <ScalarProperty Name="TAKIP_SONUCU_2" ColumnName="TAKIP_SONUCU_2" />
+                <ScalarProperty Name="TAKIP_TARIH_1" ColumnName="TAKIP_TARIH_1" />
+                <ScalarProperty Name="TAKIP_SONUCU_1" ColumnName="TAKIP_SONUCU_1" />
+                <ScalarProperty Name="YAPILACAKLAR_TARIH_2" ColumnName="YAPILACAKLAR_TARIH_2" />
+                <ScalarProperty Name="YAPILACAKLAR_SORUMLU_2" ColumnName="YAPILACAKLAR_SORUMLU_2" />
+                <ScalarProperty Name="YAPILACAKLAR_ACIKLAMA_2" ColumnName="YAPILACAKLAR_ACIKLAMA_2" />
+                <ScalarProperty Name="YAPILACAKLAR_TARIH_1" ColumnName="YAPILACAKLAR_TARIH_1" />
+                <ScalarProperty Name="YAPILACAKLAR_SORUMLU_1" ColumnName="YAPILACAKLAR_SORUMLU_1" />
+                <ScalarProperty Name="YAPILACAKLAR_ACIKLAMA_1" ColumnName="YAPILACAKLAR_ACIKLAMA_1" />
+                <ScalarProperty Name="ONLEYICI_FAALIYET_TARIH" ColumnName="ONLEYICI_FAALIYET_TARIH" />
+                <ScalarProperty Name="ONLEYICI_FAALIYET" ColumnName="ONLEYICI_FAALIYET" />
+                <ScalarProperty Name="DUZELTME_ISLEM" ColumnName="DUZELTME_ISLEM" />
+                <ScalarProperty Name="DUZELTME_FAALIYET_TARIH" ColumnName="DUZELTME_FAALIYET_TARIH" />
+                <ScalarProperty Name="DUZELTME_FAALIYET" ColumnName="DUZELTME_FAALIYET" />
+                <ScalarProperty Name="UYGUNSUZ_KOK_NEDEN_ACIK" ColumnName="UYGUNSUZ_KOK_NEDEN_ACIK" />
+                <ScalarProperty Name="UYGUNSUZ_KOK_NEDEN" ColumnName="UYGUNSUZ_KOK_NEDEN" />
+                <ScalarProperty Name="UYGUNSUZ_GRUP" ColumnName="UYGUNSUZ_GRUP" />
+                <ScalarProperty Name="UYGUNSUZ_MAKINA" ColumnName="UYGUNSUZ_MAKINA" />
+                <ScalarProperty Name="HATALI_URUN_MIKTARI" ColumnName="HATALI_URUN_MIKTARI" />
+                <ScalarProperty Name="MALZEME_ADI" ColumnName="MALZEME_ADI" />
+                <ScalarProperty Name="MALZEME_KODU" ColumnName="MALZEME_KODU" />
+                <ScalarProperty Name="OPERATOR_ADI" ColumnName="OPERATOR_ADI" />
+                <ScalarProperty Name="BIRIM" ColumnName="BIRIM" />
+                <ScalarProperty Name="SIPARIS_NO" ColumnName="SIPARIS_NO" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+                <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
+                <ScalarProperty Name="MUSTERI_ADI" ColumnName="MUSTERI_ADI" />
+                <ScalarProperty Name="UYGUNSUZLUK_TANIMI" ColumnName="UYGUNSUZLUK_TANIMI" />
+                <ScalarProperty Name="UYGUNSUZLUK_SUREC" ColumnName="UYGUNSUZLUK_SUREC" />
+                <ScalarProperty Name="UYGUNSUZLUK_FAALIYET" ColumnName="UYGUNSUZLUK_FAALIYET" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="KAYIT_YAPAN" ColumnName="KAYIT_YAPAN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_DOFLIST">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_DOFLIST">
+              <MappingFragment StoreEntitySet="EGEM_DOFLIST">
+                <ScalarProperty Name="IMAGE_4" ColumnName="IMAGE_4" />
+                <ScalarProperty Name="IMAGE_3" ColumnName="IMAGE_3" />
+                <ScalarProperty Name="IMAGE_2" ColumnName="IMAGE_2" />
+                <ScalarProperty Name="IMAGE_1" ColumnName="IMAGE_1" />
+                <ScalarProperty Name="UYGUNSUZLUK_TANIMI" ColumnName="UYGUNSUZLUK_TANIMI" />
+                <ScalarProperty Name="UYGUNSUZLUK_SUREC" ColumnName="UYGUNSUZLUK_SUREC" />
+                <ScalarProperty Name="UYGUNSUZLUK_FAALIYET" ColumnName="UYGUNSUZLUK_FAALIYET" />
+                <ScalarProperty Name="KAYIT_YAPAN" ColumnName="KAYIT_YAPAN" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_PROJESILINDIR_TALEP">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_PROJESILINDIR_TALEP">
+              <MappingFragment StoreEntitySet="EGEM_PROJESILINDIR_TALEP">
+                <ScalarProperty Name="MIKTAR" ColumnName="MIKTAR" />
+                <ScalarProperty Name="SIPARIS_TARIHI" ColumnName="SIPARIS_TARIHI" />
+                <ScalarProperty Name="STOK_ADI" ColumnName="STOK_ADI" />
+                <ScalarProperty Name="STOK_KODU" ColumnName="STOK_KODU" />
+                <ScalarProperty Name="CARI_ISIM" ColumnName="CARI_ISIM" />
+                <ScalarProperty Name="CARI_KODU" ColumnName="CARI_KODU" />
+                <ScalarProperty Name="TALEP_NO" ColumnName="TALEP_NO" />
+                <ScalarProperty Name="SIPARIS_NO" ColumnName="SIPARIS_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EGEM_MVC_USER">
+            <EntityTypeMapping TypeName="EGEM2023Model.EGEM_MVC_USER">
+              <MappingFragment StoreEntitySet="EGEM_MVC_USER">
+                <ScalarProperty Name="ROL" ColumnName="ROL" />
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="AD_SOYAD" ColumnName="AD_SOYAD" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

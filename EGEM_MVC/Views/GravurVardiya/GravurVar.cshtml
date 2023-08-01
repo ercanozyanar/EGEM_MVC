@@ -1,0 +1,62 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using EGEM_MVC.Models.EntityEgem;
+@model  PagedList.IPagedList<EO_GRAVUR_VARDIYA>
+@{
+    ViewBag.Title = "GravurVar";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+&nbsp;
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/lib/bootstrap.min.css">
+<script src="/lib/jquery-1.12.2.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<p></p>
+&nbsp;&nbsp;
+
+
+<table id="hamlist" class="table table-striped table-bordered table-hover " width="100" cellspacing="0">
+    <tr class="table-secondary">
+        <th>Detay</th>
+        <th scope="row">TARIH</th>
+        <th scope="row">VARDIYA</th>
+        <th scope="row">URUN KODU</th>
+        <th scope="row">MAKINE</th>
+        <th scope="row">ISEMRI</th>
+        <th scope="row">URETILEN_PALET</th>
+        <th scope="row">DIE VURUSU</th>
+        <th scope="row">VARDIYADA CALISAN</th>
+        <th scope="row">MAKINE HIZ</th>
+        <th scope="row">TESLIM EDEN</th>
+        <th scope="row">TESLIM ALAN</th>
+    </tr>
+    <tbody>
+        @foreach (var gravurlist in Model)
+        {
+            <tr>
+                <th><a href="/GravurVardiya/GravurVardetay/@gravurlist.ID" class="btn bg-info">Detay</a></th>
+                <td>@gravurlist.TARIH</td>
+                <td>@gravurlist.VARDIYA</td>
+                <td>@gravurlist.URUN_KODU</td>
+                <td>@gravurlist.MAKINE</td>
+                <td>@gravurlist.ISEMRI</td>
+                <td>@gravurlist.URETILEN_PALET</td>
+                <td>@gravurlist.DIE_VURUSU</td>
+                <td>@gravurlist.VARD_CALISAN</td>
+                <td>@gravurlist.MAKINE_HIZ</td>
+                <td>@gravurlist.TESLIM_EDEN</td>
+                <td>@gravurlist.TESLIM_ALAN</td>
+            </tr>
+        }
+    </tbody>
+</table>
+ Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+@Html.PagedListPager(Model, Page_No =>Url.Action("GravurVar",
+    new { Page_No, Sorting_Order= ViewBag.CurrentSortOrder, Filter_Value = ViewBag.FilterValue }))
+
+
+
+
